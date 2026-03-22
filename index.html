@@ -1,40 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <title>My Story Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Georgia;
-            background: black;
-            color: white;
-            text-align: center;
-            padding: 30px;
-        }
+<title>Bangla Golpo Galaxy</title>
 
-        h1 {
-            color: cyan;
-        }
+<style>
 
-        .story-box {
-            margin-top: 30px;
-        }
+/* BODY */
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(to bottom, #010314, #021024);
+  color: white;
+}
 
-        a {
-            display: block;
-            background: cyan;
-            color: black;
-            padding: 10px;
-            margin: 10px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-    </style>
+/* HEADER */
+header {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+header h1 {
+  font-size: 26px;
+  color: cyan;
+}
+
+header p {
+  opacity: 0.7;
+}
+
+/* CATEGORY BUTTONS */
+.categories {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.categories button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  background: #0f172a;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.categories button:hover {
+  background: cyan;
+  color: black;
+}
+
+/* STORY GRID */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 15px;
+}
+
+/* CARD */
+.card {
+  background: #0b1120;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* IMAGE */
+.card img {
+  width: 100%;
+}
+
+/* TEXT */
+.card h3 {
+  margin: 10px;
+}
+
+.card a {
+  text-decoration: none;
+  color: white;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 8px 12px;
+  background: cyan;
+  color: black;
+  border-radius: 6px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.5;
+}
+
+</style>
+
 </head>
 
 <body>
 
+<header>
+  <h1>🌌 Bangla Golpo Galaxy</h1>
+  <p>বাংলা গল্পের এক নতুন জগৎ</p>
+</header>
+
+<div class="categories">
+  <button>🚀 Sci-Fi</button>
+  <button>❤️ Romantic</button>
+  <button>💔 বিরহ</button>
+</div>
+
+<div class="container">
+
+  <!-- STORY 1 -->
+  <div class="card">
+    <img src="84b36d79-1f63-44ae-9f53-6b2039306b81.png">
+    <h3>অজানা জগতের দ্বার</h3>
+    <a href="part1.html" class="btn">পড়ুন</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Bangla Golpo Galaxy
+</footer>
+
+</body>
+</html>
 <h1>Welcome to My Story World 🌌</h1>
 
 <p>এখানে আপনি আমার লেখা বিভিন্ন গল্প পড়তে পারবেন</p>
