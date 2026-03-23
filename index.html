@@ -7,8 +7,164 @@
 <title>Bangla Golpo Galaxy</title>
 
 <style>
-  <script>
 
+/* ===== BODY (পুরো ওয়েবসাইটের background & font) ===== */
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(to bottom, #020617, #020c1b);
+  color: white;
+}
+
+/* ===== HEADER (উপরের title section) ===== */
+header {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+/* Website title */
+header h1 {
+  font-size: 26px;
+  color: #38bdf8; /* sky blue */
+  text-shadow: 0 0 10px rgba(56,189,248,0.4);
+}
+
+/* subtitle */
+header p {
+  opacity: 0.7;
+}
+
+/* ===== CATEGORY BUTTONS ===== */
+.categories {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* button style */
+.categories button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  background: #0f172a;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* hover effect */
+.categories button:hover {
+  background: #38bdf8;
+  color: black;
+}
+
+/* click effect */
+.categories button:active {
+  background: #38bdf8;
+  color: black;
+}
+
+/* ===== STORY CONTAINER (cards layout) ===== */
+.container {
+  display: flex;              /* grid বাদ দিয়ে flex */
+  flex-wrap: wrap;            /* একাধিক card row */
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ===== CARD (story box) ===== */
+.card {
+  width: 260px;
+  background: #020617;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* hover zoom (shadow বাদ) */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* ===== IMAGE (full visible image) ===== */
+.card img {
+  width: 100%;
+  height: auto;   /* 🔥 পুরো image দেখা যাবে */
+}
+
+/* ===== STORY TITLE ===== */
+.card h3 {
+  margin: 10px;
+  color: #e2e8f0;
+}
+
+/* ===== READ BUTTON ===== */
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 8px 12px;
+  background: #2563eb;   /* 🔵 blue */
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* button hover */
+.btn:hover {
+  background: #1d4ed8;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.6;
+  border-top: 1px solid #0f172a;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <h1>🌌 Bangla Golpo Galaxy</h1>
+  <p>বাংলা গল্পের এক নতুন জগৎ</p>
+</header>
+
+<!-- ===== CATEGORY BUTTONS ===== -->
+<div class="categories">
+  <button onclick="filterStory('all')">🌐 All</button>
+  <button onclick="filterStory('sci')">🚀 Sci-Fi</button>
+  <button onclick="filterStory('romantic')">❤️ Romantic</button>
+  <button onclick="filterStory('sad')">💔 বিরহ</button>
+</div>
+
+<!-- ===== STORY CARDS ===== -->
+<div class="container">
+
+  <!-- Story 1 -->
+  <div class="card" data-category="sci">
+    <img src="IMG_20260323_124840.jpg">
+    <h3>অজানা জগতের দ্বার</h3>
+    <a href="part1.html" class="btn">পড়ুন</a>
+  </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  © 2026 Bangla Golpo Galaxy
+</footer>
+
+<!-- ===== JAVASCRIPT (filter system) ===== -->
+<script>
+
+/* Category filter system */
 function filterStory(category) {
   let cards = document.querySelectorAll(".card");
 
@@ -27,14 +183,8 @@ function filterStory(category) {
 
 </script>
 
-/* BODY */
-body {
-  margin: 0;
-  font-family: Arial;
-  background: linear-gradient(to bottom, #010314, #021024);
-  color: white;
-}
-
+</body>
+</html>
 /* HEADER */
 header {
   text-align: center;
