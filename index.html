@@ -98,7 +98,12 @@ header p {
 .card img {
   width: 100%;
 }
-
+.card img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;   /* 🔥 এইটা ছবি ছোট করবে */
+  object-fit: cover;
+  }
 /* TEXT */
 .card h3 {
   margin: 10px;
