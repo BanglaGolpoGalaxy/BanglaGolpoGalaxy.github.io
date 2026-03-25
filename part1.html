@@ -23,25 +23,28 @@ body {
   margin:auto;
 }
 
-h1 { text-align:center; }
-h2 { text-align:center; color:blue; }
+/* 🔥 TITLE */
+h1 { text-align:center; margin-bottom:10px; }
+h2 { text-align:center; color:blue; margin-bottom:20px; }
 
+/* 🖼 IMAGE */
 img {
   width:100%;
   border-radius:10px;
   margin:20px 0;
 }
 
-/* STORY */
+/* 📖 STORY */
 .story p {
   margin-bottom:14px;
+  text-align:justify;
 }
 
-/* 🔥 FIXED NAV */
+/* 🔘 NAVIGATION */
 .nav {
   display:flex;
   gap:10px;
-  margin-top:30px;
+  margin-top:40px;
 }
 
 .nav a {
@@ -54,14 +57,21 @@ img {
   border-radius:6px;
 }
 
+/* 🏠 HOME */
 .home {
+  text-align:center;
+  margin-top:20px;
+}
+
+/* 🔗 SHARE */
+.share {
   text-align:center;
   margin-top:15px;
 }
 
-.share {
-  text-align:center;
-  margin-top:10px;
+/* 💬 COMMENT */
+#cusdis_thread {
+  margin-top:30px; /* 🔥 PERFECT GAP */
 }
 
 </style>
@@ -72,32 +82,29 @@ img {
 
 <div class="container">
 
+<!-- 🔥 TITLE -->
 <h1>অদৃশ্য জগতের দ্বার</h1>
 <h2>Part - 1 - অজানার পথে</h2>
 
-<img src="84b36d79-1f63-44ae-9f53-6b2039306b81.png">
+<!-- 🖼 IMAGE -->
+<img src="IMG_20260323_124840.jpg">
 
+<!-- 📖 STORY -->
 <div class="story">
 
 <p>“সংসার দুঃখময়…”</p>
 
-<p>এই উপলব্ধিটা হঠাৎ করে আসেনি। বছরের পর বছর মানুষের ভেতরের অন্ধকার, প্রতারণা, নিষ্ঠুরতা—সব দেখেছি খুব কাছ থেকে। আমি ইন্টেলিজেন্স ব্যুরোর একজন সদস্য ছিলাম।</p>
+<p>এই উপলব্ধিটা হঠাৎ করে আসেনি। বছরের পর বছর মানুষের ভেতরের অন্ধকার, প্রতারণা, নিষ্ঠুরতা—সব দেখেছি খুব কাছ থেকে।</p>
 
 <p>কিন্তু একটা সময় এসে মনে হলো—সব সত্য জানার পরও মানুষ বদলায় না।</p>
 
 <p>তাই একদিন সব ছেড়ে দিয়ে বেরিয়ে পড়লাম।</p>
 
-<p>ঘোড়ার পিঠে বসে আমি এগিয়ে চলেছি।</p>
+<p>ঘোড়ার পিঠে বসে আমি এগিয়ে চলেছি…</p>
 
 <p>ঠিক তখনই আমি দেখলাম—একটা পুরোনো গাড়ি…</p>
 
-<p>লোকটা অস্বাভাবিক মনে হলো।</p>
-
-<p>একটা ছেলে কাঁদতে কাঁদতে বলল, “না…”</p>
-
-<p>লোকটা বলল, “চুপ…”</p>
-
-<p>তারপর সব বদলে গেল…</p>
+<p>লোকটা অস্বাভাবিক মনে হলো…</p>
 
 <p>আমি সিদ্ধান্ত নিলাম—ওদের অনুসরণ করব।</p>
 
@@ -119,10 +126,7 @@ img {
 <button onclick="copyLink()">🔗 Share</button>
 </div>
 
-
-
-  
-<!-- 💬 COMMENT SECTION -->
+<!-- 💬 COMMENT (CUSDIS) -->
 <div id="cusdis_thread"
   data-host="https://cusdis.com"
   data-app-id="6bf38bc4-dcc7-46ff-b711-47dcda6d2f5a"
@@ -130,8 +134,17 @@ img {
   data-page-url="https://banglagolpogalaxy.github.io/part1.html"
   data-page-title="অদৃশ্য জগতের দ্বার - Part 1">
 </div>
-  
+
 <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
 </div>
+
+<script>
+function copyLink(){
+navigator.clipboard.writeText(window.location.href);
+alert("Link copied!");
+}
+</script>
+
 </body>
 </html>
