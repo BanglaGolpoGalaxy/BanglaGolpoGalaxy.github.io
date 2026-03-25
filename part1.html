@@ -16,11 +16,27 @@ body {
   background:white;
   color:black;
   line-height:1.6;
+  transition:0.3s;
 }
 
 .container {
   max-width:800px;
   margin:auto;
+}
+
+/* 🌙 DARK MODE */
+.dark-mode {
+  background:#020617;
+  color:white;
+}
+
+.dark-mode a {
+  background:#2563eb;
+  color:white;
+}
+
+.dark-mode h2 {
+  color:#38bdf8;
 }
 
 /* 🔥 TITLE */
@@ -40,7 +56,7 @@ img {
   text-align:justify;
 }
 
-/* 🔘 NAVIGATION */
+/* 🔘 NAV */
 .nav {
   display:flex;
   gap:10px;
@@ -71,7 +87,13 @@ img {
 
 /* 💬 COMMENT */
 #cusdis_thread {
-  margin-top:30px; /* 🔥 PERFECT GAP */
+  margin-top:20px;
+}
+
+.comment-text {
+  text-align:center;
+  margin-top:25px;
+  font-size:16px;
 }
 
 </style>
@@ -79,6 +101,13 @@ img {
 </head>
 
 <body>
+
+<!-- 🌙 DARK MODE BUTTON -->
+<div style="text-align:right;">
+<button onclick="toggleDark()" style="padding:6px 12px; border-radius:6px;">
+🌙 Mode
+</button>
+</div>
 
 <div class="container">
 
@@ -126,7 +155,12 @@ img {
 <button onclick="copyLink()">🔗 Share</button>
 </div>
 
-<!-- 💬 COMMENT (CUSDIS) -->
+<!-- 💬 COMMENT TEXT -->
+<p class="comment-text">
+💬 নীচের কমেন্ট বক্সে আপনার মূল্যবান মতামত জানান
+</p>
+
+<!-- 💬 COMMENT BOX -->
 <div id="cusdis_thread"
   data-host="https://cusdis.com"
   data-app-id="6bf38bc4-dcc7-46ff-b711-47dcda6d2f5a"
@@ -140,10 +174,16 @@ img {
 </div>
 
 <script>
+
 function copyLink(){
-navigator.clipboard.writeText(window.location.href);
-alert("Link copied!");
+  navigator.clipboard.writeText(window.location.href);
+  alert("Link copied!");
 }
+
+function toggleDark(){
+  document.body.classList.toggle("dark-mode");
+}
+
 </script>
 
 </body>
