@@ -1,149 +1,185 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="EFKZ__SGNwsPC-hOlrKDHH-bJDzpIeZDTLDlve-SxtU" />
-<meta name="description" content="বাংলা গল্প, সাই-ফাই, রোমান্টিক ও রহস্যময় গল্প পড়ুন Bangla Golpo Galaxy-তে।">
-<meta name="keywords" content="bangla golpo, sci-fi golpo, romantic golpo, golpo-galaxy, bengali story">
-<title>Bangla Golpo Galaxy</title>
-
-<style>
-
-/* BODY */
-body {
-  margin: 0;
-  font-family: Arial;
-  background: linear-gradient(to bottom, #020617, #020c1b);
-  color: white;
-}
-
-/* HEADER */
-header {
-  text-align: center;
-  padding: 30px 10px;
-}
-
-header h1 {
-  font-size: 26px;
-  color: #38bdf8;
-}
-
-header p {
-  opacity: 0.7;
-}
-
-/* BUTTONS */
-.categories {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.categories button {
-  padding: 10px 15px;
-  margin: 5px;
-  border: none;
-  border-radius: 20px;
-  background: #0f172a;
-  color: white;
-  cursor: pointer;
-}
-
-.categories button:hover {
-  background: #38bdf8;
-  color: black;
-}
-
-/* CARDS */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.card {
-  width: 260px;
-  background: #020617;
-  border-radius: 12px;
-  overflow: hidden;
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-}
-
-.card h3 {
-  margin: 10px;
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 8px 12px;
-  background: #2563eb;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  opacity: 0.6;
-}
-
-</style>
+  
+  <meta name="google-site-verification" content="EFKZ__SGNwsPC-hOlrKDHH-bJDzpIeZDTLDlve-SxtU" />
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Bangla Golpo Galaxy</title>
+  
+  <meta name="description" content="বাংলা গল্প পড়ুন - Sci-Fi, Horror, Romantic">
+  <meta name="keywords" content="bangla golpo, sci-fi golpo, horror golpo">
+  
+  <style>
+    /* 🔥 Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #020617;
+      color: white;
+    }
+    
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    header h1 {
+      color: #38bdf8;
+    }
+    
+    /* SECTION */
+    .section {
+      padding: 10px;
+    }
+    
+    .section h2 {
+      margin-left: 10px;
+    }
+    
+    /* SCROLL */
+    .scroll {
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+      padding: 10px;
+    }
+    
+    /* CARD */
+    .card {
+      min-width: 220px;
+      background: #0f172a;
+      border-radius: 10px;
+      flex-shrink: 0;
+      text-align: center;
+    }
+    
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 8px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+  </style>
+  
 </head>
 
 <body>
-
-<header>
-  <h1>🌌 Bangla Golpo Galaxy</h1>
-  <p>বাংলা গল্পের এক নতুন জগৎ</p>
-</header>
-
-<div class="categories">
-  <button onclick="filterStory('all')">🌐 All</button>
-  <button onclick="filterStory('sci')">🚀 Sci-Fi</button>
-</div>
-
-<div class="container">
-
-  <div class="card" data-category="sci">
-    <img src="IMG_20260323_124840.jpg">
-    <h3>অজানা জগতের দ্বার</h3>
-    <a href="part1.html" class="btn">পড়ুন</a>
+  
+  <header>
+    <h1>🌌 Bangla Golpo Galaxy</h1>
+    <p>বাংলা গল্পের এক নতুন জগৎ</p>
+  </header>
+  
+  <!-- 🆕 LATEST STORIES -->
+  <div class="section">
+    <h2>🆕 Latest Stories</h2>
+    <div class="scroll" id="latest"></div>
   </div>
-
-</div>
-
-<footer>
-  © 2026 Bangla Golpo Galaxy
-</footer>
-
-<script>
-function filterStory(category) {
-  let cards = document.querySelectorAll(".card");
-
-  cards.forEach(card => {
-    if (category === "all") {
-      card.style.display = "block";
-    } else {
-      if (card.getAttribute("data-category") === category) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
+  
+  <!-- ⭐ FEATURED -->
+  <div class="section">
+    <h2>⭐ Featured Story</h2>
+    <div class="scroll" id="featured"></div>
+  </div>
+  
+  <!-- 🚀 SCI-FI -->
+  <div class="section">
+    <h2>🚀 Sci-Fi</h2>
+    <div class="scroll" id="sci"></div>
+  </div>
+  
+  <!-- 🌐 ALL -->
+  <div class="section">
+    <h2>🌐 All Stories</h2>
+    <div class="scroll" id="all"></div>
+  </div>
+  
+  <!-- FOOTER -->
+  <footer>
+    
+    <!-- SUBMIT -->
+    <div style="margin:15px;">
+      <a href="https://forms.gle/fXZ28mAu7d5E2xuC8" target="_blank" style="background:#38bdf8; padding:10px; border-radius:6px; color:black;">
+        📝 নিজের গল্প জমা দিন
+      </a>
+    </div>
+    
+    <!-- REPORT -->
+    <p>
+      🚨 কোনো সমস্যা বা কপিরাইট অভিযোগের জন্য যোগাযোগ করুন:<br>
+      <a href="mailto:milanbiswasmilan19@gmail.com">📩 Email করুন</a>
+    </p>
+    
+    <!-- DISCLAIMER -->
+    <p>
+      ⚠️ ব্যবহারকারীর জমা দেওয়া গল্পের দায় সম্পূর্ণ লেখকের।
+      কপিরাইট সমস্যা হলে দ্রুত সরিয়ে দেওয়া হবে।
+    </p>
+    
+    © 2026 Bangla Golpo Galaxy
+    
+  </footer>
+  
+  <script>
+    const stories = [
+    {
+      title: "অদৃশ্য জগতের দ্বার",
+      image: "IMG_20260323_124840.jpg",
+      link: "part1.html",
+      category: "sci",
+      featured: true
+    }];
+    
+    function createCard(story) {
+      return `
+<div class="card">
+<img src="${story.image}">
+<h3>${story.title}</h3>
+<a href="${story.link}" class="btn">পড়ুন</a>
+</div>`;
     }
-  });
-}
-</script>
-
+    
+    stories.forEach(story => {
+      
+      document.getElementById("latest").innerHTML += createCard(story);
+      document.getElementById("all").innerHTML += createCard(story);
+      
+      if (story.featured) {
+        document.getElementById("featured").innerHTML += createCard(story);
+      }
+      
+      if (story.category === "sci") {
+        document.getElementById("sci").innerHTML += createCard(story);
+      }
+      
+    });
+  </script>
+  
 </body>
+
 </html>
