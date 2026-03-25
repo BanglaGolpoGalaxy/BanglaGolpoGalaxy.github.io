@@ -85,15 +85,16 @@ img {
   margin-top:15px;
 }
 
-/* 💬 COMMENT */
-#cusdis_thread {
-  margin-top:20px;
-}
-
+/* 💬 COMMENT TEXT */
 .comment-text {
   text-align:center;
   margin-top:25px;
   font-size:16px;
+}
+
+/* 💬 COMMENT BOX */
+#cusdis_thread {
+  margin-top:20px;
 }
 
 </style>
@@ -160,13 +161,14 @@ img {
 💬 নীচের কমেন্ট বক্সে আপনার মূল্যবান মতামত জানান
 </p>
 
-<!-- 💬 COMMENT BOX -->
+<!-- 💬 CUSDIS COMMENT -->
 <div id="cusdis_thread"
   data-host="https://cusdis.com"
   data-app-id="6bf38bc4-dcc7-46ff-b711-47dcda6d2f5a"
   data-page-id="part1"
   data-page-url="https://banglagolpogalaxy.github.io/part1.html"
-  data-page-title="অদৃশ্য জগতের দ্বার - Part 1">
+  data-page-title="অদৃশ্য জগতের দ্বার - Part 1"
+  data-theme="light">
 </div>
 
 <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
@@ -182,6 +184,19 @@ function copyLink(){
 
 function toggleDark(){
   document.body.classList.toggle("dark-mode");
+
+  const cusdis = document.getElementById("cusdis_thread");
+
+  if(document.body.classList.contains("dark-mode")){
+    cusdis.setAttribute("data-theme","dark");
+  } else {
+    cusdis.setAttribute("data-theme","light");
+  }
+
+  // 🔥 Cusdis re-render
+  if(window.CUSDIS){
+    window.CUSDIS.render();
+  }
 }
 
 </script>
