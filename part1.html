@@ -7,40 +7,36 @@
 
 <title>Part 1 - অজানার পথে | অদৃশ্য জগতের দ্বার</title>
 
-<meta name="description" content="একজন রহস্যময় মানুষ, কিছু অদ্ভুত শিশু, আর এক ভয়ংকর সত্য... পড়ুন এই ভৌতিক বাংলা গল্প।">
-<meta name="keywords" content="ভৌতিক গল্প বাংলা, রহস্য গল্প, বাংলা গল্প">
-<meta name="robots" content="index, follow">
+<meta name="description" content="একজন রহস্যময় মানুষ, কিছু অদ্ভুত শিশু...">
+<meta name="keywords" content="ভৌতিক গল্প বাংলা">
 
 <meta property="og:title" content="অদৃশ্য জগতের দ্বার - Part 1">
-<meta property="og:description" content="একটি ভয়ংকর রহস্যের শুরু...">
 <meta property="og:image" content="IMG_20260323_124840.jpg">
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="favicon.ico">
+<meta name="theme-color" content="#020617">
 
 <style>
 
-body {
+body{
 margin:0;
 padding:20px;
 font-family:'Noto Sans Bengali', sans-serif;
+line-height:1.6;
 background:white;
 color:black;
-line-height:1.6;
 transition:0.3s;
-scroll-behavior:smooth;
 }
 
-.container {
-max-width:800px;
-margin:auto;
-}
+.container{max-width:800px;margin:auto;}
 
-/* 🌙 DARK MODE */
-.dark-mode {
+.dark-mode{
 background:#020617;
 color:white;
 }
 
-/* 🔥 PROGRESS BAR */
-#progress {
+#progress{
 position:fixed;
 top:0;
 left:0;
@@ -50,7 +46,6 @@ width:0%;
 z-index:999;
 }
 
-/* TITLE */
 h1{text-align:center;}
 h2{text-align:center;color:#ff7a00;}
 
@@ -60,32 +55,68 @@ font-weight:bold;
 color:#2563eb;
 }
 
-/* IMAGE */
-img{width:100%;border-radius:10px;}
-
-/* NAV */
-.nav{display:flex;gap:10px;margin-top:40px;}
-.nav a{flex:1;text-align:center;padding:10px;background:#007BFF;color:white;border-radius:6px;}
-
-.home{text-align:center;margin-top:20px;}
-.share{text-align:center;margin-top:15px;}
-
-.related{
-margin-top:40px;
-padding:15px;
+img{
+width:100%;
 border-radius:10px;
-background:#f1f5f9;
+margin-top:10px;
 }
 
-.dark-mode .related{
-background:#0f172a;
+.continue-btn{
+display:flex;
+justify-content:flex-end;
+margin-top:20px;
 }
 
-.related a{
-display:block;
-margin:5px 0;
-color:#2563eb;
+.continue-btn a{
+background:#ff7a00;
+padding:10px 15px;
+color:white;
+border-radius:6px;
 text-decoration:none;
+}
+
+.nav{
+display:flex;
+gap:10px;
+margin-top:40px;
+}
+
+.nav a{
+flex:1;
+text-align:center;
+padding:10px;
+background:#007BFF;
+color:white;
+border-radius:6px;
+}
+
+.home{
+text-align:center;
+margin-top:20px;
+}
+
+.home a{
+background:#22c55e;
+padding:10px 20px;
+color:white;
+border-radius:8px;
+text-decoration:none;
+}
+
+.share{
+text-align:center;
+margin-top:15px;
+}
+
+.comment-text{
+margin-top:20px;
+font-size:14px;
+text-align:center;
+color:#64748b;
+}
+
+.dark-mode .comment-text{
+color:#94a3b8;
 }
 
 </style>
@@ -104,13 +135,14 @@ text-decoration:none;
 <h1>অদৃশ্য জগতের দ্বার</h1>
 <h2>Part - 1 - অজানার পথে</h2>
 
-<img src="IMG_20260323_124840.jpg">
-
 <p class="hook">
 আমি তখনও বুঝিনি—যে দৃশ্যটা দেখতে যাচ্ছি, সেটা স্বাভাবিক কিছু না...
 </p>
 
+<img src="IMG_20260323_124840.jpg">
+
 <div class="story">
+
 <p>“সংসার দুঃখময়…”</p>
 
 <p>এই উপলব্ধিটা হঠাৎ করে আসেনি। বছরের পর বছর মানুষের ভেতরের অন্ধকার, প্রতারণা, নিষ্ঠুরতা—সব দেখেছি খুব কাছ থেকে।</p>
@@ -204,13 +236,12 @@ text-decoration:none;
 <p>আর এই কাপড়ের ভেতরে কী আছে?</p>
 
 <p>আমি সিদ্ধান্ত নিলাম—ওদের অনুসরণ করব।</p>
+
 </div>
 
-<!-- 🔗 RELATED STORIES -->
-<div class="related">
-<h3>📚 Related Stories</h3>
-<a href="part2.html">👉 Part 2 - গল্পের পরবর্তী অংশ</a>
-<a href="index.html">👉 আরো গল্প পড়ুন</a>
+<!-- 👉 CONTINUE -->
+<div class="continue-btn">
+<a href="part2.html">Continue ➡</a>
 </div>
 
 <div class="nav">
@@ -223,11 +254,15 @@ text-decoration:none;
 </div>
 
 <div class="share">
-<button onclick="copyLink()">🔗 Share</button>
+<button onclick="shareNow()">📲 Share</button>
 </div>
 
-<p style="text-align:center;">💬 আপনার মতামত দিন</p>
+<!-- 💬 COMMENT TEXT -->
+<p class="comment-text">
+💬 নীচের কমেন্ট বক্সে আপনার মূল্যবান মতামত জানান
+</p>
 
+<!-- 💬 CUSDIS -->
 <div id="cusdis_thread"
 data-host="https://cusdis.com"
 data-app-id="6bf38bc4-dcc7-46ff-b711-47dcda6d2f5a"
@@ -242,14 +277,13 @@ data-page-title="অদৃশ্য জগতের দ্বার - Part 1">
 
 <script>
 
-// 🔥 Progress Bar
-window.onscroll = () => {
-let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-document.getElementById("progress").style.width = (winScroll/height)*100 + "%";
+// 🔥 Progress
+window.onscroll=()=>{
+let s=document.documentElement;
+document.getElementById("progress").style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight))*100+"%";
 }
 
-// 🌙 Auto Dark Mode
+// 🌙 DARK MODE
 if(window.matchMedia('(prefers-color-scheme: dark)').matches){
 document.body.classList.add("dark-mode");
 }
@@ -264,9 +298,46 @@ window.CUSDIS.renderTo(cusdis);
 }
 }
 
-function copyLink(){
-navigator.clipboard.writeText(window.location.href);
-alert("Link copied!");
+// 📲 SHARE (CLICK ANYWHERE CLOSE)
+function shareNow(){
+
+const url=location.href;
+const title=document.title;
+const message=`🔥 দারুণ একটা গল্প!\n${title}\n👉 ${url}`;
+
+if(navigator.share){
+navigator.share({title:title,text:message,url:url});
+}else{
+
+let overlay=document.createElement("div");
+
+overlay.style=`
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999;
+`;
+
+overlay.innerHTML=`
+<div style="background:white;color:black;padding:20px;border-radius:10px;text-align:center;">
+<p><b>শেয়ার করুন</b></p>
+
+<a href="https://wa.me/?text=${encodeURIComponent(message)}" target="_blank">🟢 WhatsApp</a><br><br>
+<a href="https://www.facebook.com/sharer/sharer.php?u=${url}" target="_blank">🔵 Facebook</a><br><br>
+<a href="mailto:?subject=${title}&body=${url}">📧 Email</a>
+</div>
+`;
+
+overlay.onclick = () => overlay.remove();
+
+document.body.appendChild(overlay);
+}
 }
 
 </script>
