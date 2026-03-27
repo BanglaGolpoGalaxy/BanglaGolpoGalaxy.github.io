@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://BanglaGolpoGalaxy.github.io/</loc>
+<loc>https://banglagolpogalaxy.github.io/</loc>
+<lastmod>2026-03-27</lastmod>
 </url>
 
 <url>
-<loc>https://BanglaGolpoGalaxy.github.io/part1.html</loc>
+<loc>https://banglagolpogalaxy.github.io/part1.html</loc>
+<lastmod>2026-03-27</lastmod>
+</url>
+
+<url>
+<loc>https://banglagolpogalaxy.github.io/part2.html</loc>
+<lastmod>2026-03-27</lastmod>
+</url>
+
+<url>
+<loc>https://banglagolpogalaxy.github.io/part3.html</loc>
+<lastmod>2026-03-27</lastmod>
+</url>
+
+<url>
+<loc>https://banglagolpogalaxy.github.io/part4.html</loc>
+<lastmod>2026-03-27</lastmod>
 </url>
 
 </urlset>
