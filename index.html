@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
 
 <meta name="google-site-verification" content="EFKZ__SGNwsPC-hOlrKDHH-bJDzpIeZDTLDlve-SxtU" />
@@ -10,76 +11,93 @@
 <title>Bangla Golpo Galaxy</title>
 
 <meta name="description" content="বাংলা গল্প পড়ুন - Sci-Fi, Horror, Romantic">
+<meta name="author" content="Bangla Golpo Galaxy">
+<meta name="theme-color" content="#020617">
+
+<!-- 🔥 SEO -->
+<meta property="og:title" content="Bangla Golpo Galaxy">
+<meta property="og:description" content="বাংলা গল্পের এক নতুন জগৎ">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://banglagolpogalaxy.github.io/">
+<meta property="og:image" content="IMG_20260323_124840.jpg">
+
+<!-- 🧠 Schema -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebSite",
+"name": "Bangla Golpo Galaxy",
+"url": "https://banglagolpogalaxy.github.io/",
+"inLanguage": "bn"
+}
+</script>
 
 <style>
-
-html { scroll-behavior: smooth; }
+html {scroll-behavior:smooth;}
 
 body {
-  margin:0;
-  font-family: Arial;
-  background:#020617;
-  color:white;
+margin:0;
+font-family:Arial;
+background:#020617;
+color:white;
 }
 
-header {
-  text-align:center;
-  padding:20px;
-}
+header {text-align:center;padding:20px;}
+header h1 {color:#38bdf8;}
 
-header h1 { color:#38bdf8; }
-
-.section {
-  padding:10px;
-}
+.section {padding:10px;}
 
 .scroll {
-  display:flex;
-  overflow-x:auto;
-  gap:10px;
-  padding:10px;
+display:flex;
+overflow-x:auto;
+gap:10px;
+padding:10px;
 }
 
-/* 🔥 SMALL CARD */
+/* 🔥 CARD */
 .card {
-  min-width:160px;
-  max-width:160px;
-  background:#0f172a;
-  border-radius:10px;
-  flex-shrink:0;
-  text-align:center;
+min-width:160px;
+max-width:160px;
+background:#0f172a;
+border-radius:10px;
+flex-shrink:0;
+text-align:center;
+transition:0.3s;
+}
+
+.card:hover {
+transform:scale(1.05);
 }
 
 .card img {
-  width:100%;
-  height:180px;
-  object-fit:cover;
-  border-radius:10px;
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
 }
 
 .card h3 {
-  font-size:14px;
-  padding:5px;
+font-size:14px;
+padding:5px;
 }
 
 .btn {
-  display:inline-block;
-  margin:5px;
-  padding:6px;
-  font-size:12px;
-  background:#2563eb;
-  color:white;
-  text-decoration:none;
-  border-radius:6px;
+display:inline-block;
+margin:5px;
+padding:6px;
+font-size:12px;
+background:#2563eb;
+color:white;
+text-decoration:none;
+border-radius:6px;
 }
 
 footer {
-  text-align:center;
-  padding:20px;
-  font-size:14px;
-  opacity:0.7;
+text-align:center;
+padding:20px;
+font-size:14px;
+opacity:0.85;
 }
-
 </style>
 
 </head>
@@ -87,8 +105,13 @@ footer {
 <body>
 
 <header>
-<h1>🌌 Bangla Golpo Galaxy</h1>
-<p>বাংলা গল্পের এক নতুন জগৎ</p>
+
+  <img src="BGGlogo.jpg" alt="Bangla Golpo Galaxy Logo"
+  style="width:120px; margin-bottom:10px;">
+
+  <h1>🌌 Bangla Golpo Galaxy</h1>
+  <p>বাংলা গল্পের এক নতুন জগৎ</p>
+
 </header>
 
 <!-- 🆕 LATEST -->
@@ -122,48 +145,115 @@ footer {
 style="background:#38bdf8; padding:10px; border-radius:6px; color:black;">
 📝 নিজের গল্প জমা দিন
 </a>
+
+<p>⚠️ গল্পের দায় সম্পূর্ণ লেখকের নিজের</p>
 </div>
 
-<p>
-🚨 অভিযোগের জন্য:  
-<a href="mailto:milanbiswasmilan19@gmail.com">Email</a>
-</p>
+<!-- 📩 CONTACT FORM -->
+<div style="margin-top:40px;">
 
-<p>
-⚠️ গল্পের দায় সম্পূর্ণ লেখকের
-</p>
+<h3>📩 অভিযোগ / মতামত পাঠান</h3>
 
-© 2026 Bangla Golpo Galaxy
+<form id="contactForm" action="https://formspree.io/f/mpqowyld" method="POST">
+
+<input type="text" name="name" placeholder="আপনার নাম" required
+style="width:100%; padding:10px; margin:6px 0; border-radius:6px;">
+
+<input type="email" name="email" placeholder="আপনার ইমেইল (optional)"
+style="width:100%; padding:10px; margin:6px 0; border-radius:6px;">
+
+<textarea name="message" placeholder="আপনার বার্তা লিখুন..." required
+style="width:100%; padding:10px; margin:6px 0; border-radius:6px; height:110px;"></textarea>
+
+<button type="submit"
+style="width:100%; padding:10px; background:#007BFF; color:white; border:none; border-radius:6px;">
+📤 পাঠান
+</button>
+
+</form>
+
+</div>
+
+<!-- ✅ POPUP -->
+<div id="popup" style="
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:white;
+color:black;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 15px rgba(0,0,0,0.3);
+z-index:999;
+">
+<p>✅ ধন্যবাদ! আপনার বার্তা সফলভাবে পাঠানো হয়েছে!</p>
+<button onclick="closePopup()">OK</button>
+</div>
+
+<p style="margin-top:20px;">© 2026 Bangla Golpo Galaxy</p>
 
 </footer>
 
 <script>
 
+// 🌙 AUTO DARK MODE
+if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+document.body.classList.add("dark-mode");
+}
+
+// 📚 STORIES
 const stories = [
 {
-  title:"অদৃশ্য জগতের দ্বার",
-  image:"IMG_20260323_124840.jpg",
-  link:"part1.html",
-  category:"sci",
-  featured:true
+title:"অদৃশ্য জগতের দ্বার",
+image:"IMG_20260323_124840.jpg",
+link:"part1.html",
+category:"sci",
+featured:true
 }
 ];
 
+// 🎴 CARD
 function card(s){
 return `
 <div class="card">
-<img src="${s.image}">
+<img src="${s.image}" loading="lazy">
 <h3>${s.title}</h3>
 <a href="${s.link}" class="btn">পড়ুন</a>
 </div>`;
 }
 
+// LOAD STORIES
 stories.forEach(s=>{
 latest.innerHTML+=card(s);
 all.innerHTML+=card(s);
 if(s.featured) featured.innerHTML+=card(s);
 if(s.category==="sci") sci.innerHTML+=card(s);
 });
+
+// 📩 FORM SUBMIT
+const form=document.getElementById("contactForm");
+
+form.addEventListener("submit", async function(e){
+e.preventDefault();
+
+const data=new FormData(form);
+
+await fetch(form.action,{
+method:"POST",
+body:data,
+headers:{'Accept':'application/json'}
+});
+
+form.reset();
+document.getElementById("popup").style.display="block";
+});
+
+// CLOSE POPUP
+function closePopup(){
+document.getElementById("popup").style.display="none";
+}
 
 </script>
 
