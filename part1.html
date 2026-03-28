@@ -5,17 +5,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Part 1 - অজানার পথে | অদৃশ্য জগতের দ্বার</title>
+<title>অদৃশ্য জগতের দ্বার - Part 1 | অজানার পথে</title>
 
-<meta name="description" content="একজন রহস্যময় মানুষ, কিছু অদ্ভুত শিশু...">
-<meta name="keywords" content="ভৌতিক গল্প বাংলা">
-
+<meta name="description" content="অদৃশ্য জগতের দ্বার Part 1 - রহস্যময় যাত্রার শুরু">
 <meta property="og:title" content="অদৃশ্য জগতের দ্বার - Part 1">
+<meta property="og:description" content="একটি রহস্যময় অভিযানের শুরু...">
 <meta property="og:image" content="IMG_20260323_124840.jpg">
 
-<link rel="manifest" href="manifest.json">
-<link rel="icon" href="favicon.ico">
-<meta name="theme-color" content="#020617">
+<!-- FONT FIX -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
 
 <style>
 
@@ -23,19 +21,23 @@ body{
 margin:0;
 padding:20px;
 font-family:'Noto Sans Bengali', sans-serif;
-line-height:1.6;
+line-height:1.8;
 background:white;
 color:black;
 transition:0.3s;
 }
 
-.container{max-width:800px;margin:auto;}
+.container{
+max-width:800px;
+margin:auto;
+}
 
 .dark-mode{
 background:#020617;
 color:white;
 }
 
+/* 🔥 PROGRESS BAR */
 #progress{
 position:fixed;
 top:0;
@@ -58,13 +60,23 @@ color:#2563eb;
 img{
 width:100%;
 border-radius:10px;
-margin-top:10px;
+margin:15px 0;
 }
 
+p{
+margin-bottom:14px;
+}
+/* RELATED */
+.related {
+  margin-top: 40px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f1f5f9;
+}
+/* BUTTON */
 .continue-btn{
-display:flex;
-justify-content:flex-end;
-margin-top:20px;
+text-align:right;
+margin-top:25px;
 }
 
 .continue-btn a{
@@ -75,21 +87,7 @@ border-radius:6px;
 text-decoration:none;
 }
 
-.nav{
-display:flex;
-gap:10px;
-margin-top:40px;
-}
-
-.nav a{
-flex:1;
-text-align:center;
-padding:10px;
-background:#007BFF;
-color:white;
-border-radius:6px;
-}
-
+/* HOME */
 .home{
 text-align:center;
 margin-top:20px;
@@ -103,11 +101,13 @@ border-radius:8px;
 text-decoration:none;
 }
 
+/* SHARE */
 .share{
 text-align:center;
 margin-top:15px;
 }
 
+/* COMMENT TEXT */
 .comment-text{
 margin-top:20px;
 font-size:14px;
@@ -119,7 +119,39 @@ color:#64748b;
 color:#94a3b8;
 }
 
+/* POPUP */
+#popup{
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:white;
+color:black;
+padding:20px;
+border-radius:10px;
+}
+
+/* ----- STYLED DARK MODE BUTTON (added) ----- */
+.mode-btn {
+  background: #334155;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.dark-mode .mode-btn {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
 </style>
+
 </head>
 
 <body>
@@ -127,19 +159,19 @@ color:#94a3b8;
 <div id="progress"></div>
 
 <div style="text-align:right;">
-<button onclick="toggleDark()">🌙 Mode</button>
+  <button class="mode-btn" onclick="toggleDark()">🌙 Mode</button>
 </div>
 
 <div class="container">
 
 <h1>অদৃশ্য জগতের দ্বার</h1>
-<h2>Part - 1 - অজানার পথে</h2>
+<h2>Part 1 - অজানার পথে</h2>
 
 <p class="hook">
 আমি তখনও বুঝিনি—যে দৃশ্যটা দেখতে যাচ্ছি, সেটা স্বাভাবিক কিছু না...
 </p>
 
-<img src="AjanarPothe.jpg">
+<img src="IMG_20260323_124840.jpg" loading="lazy">
 
 <div class="story">
 
@@ -238,37 +270,38 @@ color:#94a3b8;
 <p>আমি সিদ্ধান্ত নিলাম—ওদের অনুসরণ করব।</p>
 
 </div>
-
-<!-- 👉 CONTINUE -->
+<!-- RELATED -->
+<div class="related">
+  <h3>📚 পরবর্তী অংশ</h3>
+  <a href="part2.html">👉 Part 2 - পরবর্তী রহস্য</a>
+</div>
+<!-- CONTINUE -->
 <div class="continue-btn">
 <a href="part2.html">Continue ➡</a>
 </div>
 
-<div class="nav">
-<a href="#">⬅ Previous</a>
-<a href="part2.html">Next ➡</a>
-</div>
-
+<!-- HOME -->
 <div class="home">
 <a href="index.html">🏠 Home</a>
 </div>
 
+<!-- SHARE -->
 <div class="share">
 <button onclick="shareNow()">📲 Share</button>
 </div>
 
-<!-- 💬 COMMENT TEXT -->
 <p class="comment-text">
-💬 নীচের কমেন্ট বক্সে আপনার মূল্যবান মতামত জানান
+💬 নীচে আপনার মতামত জানান
 </p>
 
-<!-- 💬 CUSDIS -->
+<!-- 💬 CUSDIS COMMENT (FIXED) -->
 <div id="cusdis_thread"
 data-host="https://cusdis.com"
 data-app-id="6bf38bc4-dcc7-46ff-b711-47dcda6d2f5a"
 data-page-id="part1"
 data-page-url="https://banglagolpogalaxy.github.io/part1.html"
-data-page-title="অদৃশ্য জগতের দ্বার - Part 1">
+data-page-title="অদৃশ্য জগতের দ্বার - Part 1"
+data-theme="auto">
 </div>
 
 <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
@@ -277,66 +310,41 @@ data-page-title="অদৃশ্য জগতের দ্বার - Part 1">
 
 <script>
 
-// 🔥 Progress
+/* 🔥 PROGRESS BAR */
 window.onscroll=()=>{
 let s=document.documentElement;
-document.getElementById("progress").style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight))*100+"%";
+document.getElementById("progress").style.width=
+(s.scrollTop/(s.scrollHeight-s.clientHeight))*100+"%";
 }
 
-// 🌙 DARK MODE
+/* 🌙 DARK MODE AUTO */
 if(window.matchMedia('(prefers-color-scheme: dark)').matches){
 document.body.classList.add("dark-mode");
 }
 
+/* 🌙 TOGGLE */
 function toggleDark(){
 document.body.classList.toggle("dark-mode");
 
-const cusdis = document.getElementById("cusdis_thread");
+/* 🔁 Cusdis reload */
+const cusdis=document.getElementById("cusdis_thread");
 cusdis.innerHTML="";
 if(window.CUSDIS){
 window.CUSDIS.renderTo(cusdis);
 }
 }
 
-// 📲 SHARE (CLICK ANYWHERE CLOSE)
+/* 📲 SHARE */
 function shareNow(){
 
 const url=location.href;
 const title=document.title;
-const message=`🔥 দারুণ একটা গল্প!\n${title}\n👉 ${url}`;
 
 if(navigator.share){
-navigator.share({title:title,text:message,url:url});
+navigator.share({title,url});
 }else{
-
-let overlay=document.createElement("div");
-
-overlay.style=`
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.5);
-display:flex;
-justify-content:center;
-align-items:center;
-z-index:999;
-`;
-
-overlay.innerHTML=`
-<div style="background:white;color:black;padding:20px;border-radius:10px;text-align:center;">
-<p><b>শেয়ার করুন</b></p>
-
-<a href="https://wa.me/?text=${encodeURIComponent(message)}" target="_blank">🟢 WhatsApp</a><br><br>
-<a href="https://www.facebook.com/sharer/sharer.php?u=${url}" target="_blank">🔵 Facebook</a><br><br>
-<a href="mailto:?subject=${title}&body=${url}">📧 Email</a>
-</div>
-`;
-
-overlay.onclick = () => overlay.remove();
-
-document.body.appendChild(overlay);
+navigator.clipboard.writeText(url);
+alert("Link copied!");
 }
 }
 
