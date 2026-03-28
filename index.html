@@ -3,6 +3,7 @@
 
 <head>
 
+<!-- ✅ গুগল সার্চ কনসোল ভেরিফিকেশন -->
 <meta name="google-site-verification" content="EFKZ__SGNwsPC-hOlrKDHH-bJDzpIeZDTLDlve-SxtU" />
 
 <meta charset="UTF-8">
@@ -10,18 +11,19 @@
 
 <title>Bangla Golpo Galaxy</title>
 
+<!-- 🔍 SEO মেটা ট্যাগ -->
 <meta name="description" content="বাংলা গল্প পড়ুন - Sci-Fi, Horror, Romantic">
 <meta name="author" content="Bangla Golpo Galaxy">
 <meta name="theme-color" content="#020617">
 
-<!-- 🔥 SEO -->
+<!-- 📱 সোশ্যাল মিডিয়ায় শেয়ারের জন্য OG ট্যাগ -->
 <meta property="og:title" content="Bangla Golpo Galaxy">
 <meta property="og:description" content="বাংলা গল্পের এক নতুন জগৎ">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://banglagolpogalaxy.github.io/">
 <meta property="og:image" content="IMG_20260323_124840.jpg">
 
-<!-- 🧠 Schema -->
+<!-- 🧠 Schema.org মার্কআপ (সার্চ ইঞ্জিনের জন্য) -->
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -33,20 +35,41 @@
 </script>
 
 <style>
-html {scroll-behavior:smooth;}
+/* ========== স্টাইল ========== */
+html { scroll-behavior: smooth; }
 
 body {
 margin:0;
-font-family:Arial;
+font-family: Arial, sans-serif;
 background:#020617;
 color:white;
 }
 
-header {text-align:center;padding:20px;}
-header h1 {color:#38bdf8;}
+/* হেডার */
+header {
+text-align:center;
+padding:20px;
+}
+header h1 {
+color:#38bdf8;
+}
 
-.section {padding:10px;}
+/* সার্চ বক্স */
+.search-box {
+text-align:center;
+margin:10px;
+}
+.search-box input {
+width:80%;
+padding:10px;
+border-radius:6px;
+border:none;
+}
 
+/* সেকশন */
+.section {
+padding:10px;
+}
 .scroll {
 display:flex;
 overflow-x:auto;
@@ -54,7 +77,7 @@ gap:10px;
 padding:10px;
 }
 
-/* 🔥 CARD */
+/* কার্ড */
 .card {
 min-width:160px;
 max-width:160px;
@@ -64,118 +87,54 @@ flex-shrink:0;
 text-align:center;
 transition:0.3s;
 }
-
 .card:hover {
-transform:scale(1.05);
+transform:scale(1.05); /* হোভার করলে একটু বড় হবে */
 }
-
 .card img {
 width:100%;
 height:180px;
 object-fit:cover;
 border-radius:10px;
 }
-
 .card h3 {
 font-size:14px;
-padding:5px;
+margin:6px 0;
 }
-
-.btn {
+.card .btn {
 display:inline-block;
-margin:5px;
+margin-bottom:8px;
 padding:6px;
-font-size:12px;
 background:#2563eb;
 color:white;
 text-decoration:none;
 border-radius:6px;
+font-size:12px;
 }
 
+/* See More বাটন */
+.see-more {
+text-align:center;
+margin:10px;
+color:#38bdf8;
+cursor:pointer;
+}
+
+/* ফুটার */
 footer {
 text-align:center;
 padding:20px;
-font-size:14px;
-opacity:0.85;
 }
-</style>
+/* ফর্ম */
+form input, form textarea {
+width:100%;
+padding:8px;
+margin:5px 0;
+border-radius:5px;
+border:none;
+}
 
-</head>
-
-<body>
-
-<header>
-
-  <img src="BGGlogo.jpg" alt="Bangla Golpo Galaxy Logo"
-  style="width:120px; margin-bottom:10px;">
-
-  <h1>🌌 Bangla Golpo Galaxy</h1>
-  <p>বাংলা গল্পের এক নতুন জগৎ</p>
-
-</header>
-
-<!-- 🆕 LATEST -->
-<div class="section">
-<h2>🆕 Latest Stories</h2>
-<div class="scroll" id="latest"></div>
-</div>
-
-<!-- ⭐ FEATURED -->
-<div class="section">
-<h2>⭐ Featured Story</h2>
-<div class="scroll" id="featured"></div>
-</div>
-
-<!-- 🚀 SCI -->
-<div class="section">
-<h2>🚀 Sci-Fi</h2>
-<div class="scroll" id="sci"></div>
-</div>
-
-<!-- 🌐 ALL -->
-<div class="section">
-<h2>🌐 All Stories</h2>
-<div class="scroll" id="all"></div>
-</div>
-
-<footer>
-
-<div>
-<a href="https://forms.gle/fXZ28mAu7d5E2xuC8" target="_blank"
-style="background:#38bdf8; padding:10px; border-radius:6px; color:black;">
-📝 নিজের গল্প জমা দিন
-</a>
-
-<p>⚠️ গল্পের দায় সম্পূর্ণ লেখকের নিজের</p>
-</div>
-
-<!-- 📩 CONTACT FORM -->
-<div style="margin-top:40px;">
-
-<h3>📩 অভিযোগ / মতামত পাঠান</h3>
-
-<form id="contactForm" action="https://formspree.io/f/mpqowyld" method="POST">
-
-<input type="text" name="name" placeholder="আপনার নাম" required
-style="width:100%; padding:10px; margin:6px 0; border-radius:6px;">
-
-<input type="email" name="email" placeholder="আপনার ইমেইল (optional)"
-style="width:100%; padding:10px; margin:6px 0; border-radius:6px;">
-
-<textarea name="message" placeholder="আপনার বার্তা লিখুন..." required
-style="width:100%; padding:10px; margin:6px 0; border-radius:6px; height:110px;"></textarea>
-
-<button type="submit"
-style="width:100%; padding:10px; background:#007BFF; color:white; border:none; border-radius:6px;">
-📤 পাঠান
-</button>
-
-</form>
-
-</div>
-
-<!-- ✅ POPUP -->
-<div id="popup" style="
+/* পপআপ */
+#popup {
 display:none;
 position:fixed;
 top:50%;
@@ -187,74 +146,225 @@ padding:20px;
 border-radius:10px;
 box-shadow:0 0 15px rgba(0,0,0,0.3);
 z-index:999;
-">
-<p>✅ ধন্যবাদ! আপনার বার্তা সফলভাবে পাঠানো হয়েছে!</p>
+text-align:center;
+}
+#popup button {
+margin-top:10px;
+padding:6px 12px;
+border:none;
+background:#007BFF;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- ========== হেডার (লোগো + সাইটের নাম) ========== -->
+<header>
+<img src="BGGlogo.jpg" alt="Bangla Golpo Galaxy Logo" style="width:120px; margin-bottom:10px;">
+<h1>🌌 Bangla Golpo Galaxy</h1>
+<p>বাংলা গল্পের এক নতুন জগৎ</p>
+</header>
+
+<!-- 🔍 সার্চ বক্স -->
+<div class="search-box">
+<input type="text" id="search" placeholder="🔍 গল্প খুঁজুন...">
+</div>
+
+<!-- ========== ক্যাটাগরি সেকশন ========== -->
+<!-- 🆕 Latest (সবচেয়ে নতুন গল্প প্রথমে) -->
+<div class="section">
+<h2>🆕 Latest</h2>
+<div class="scroll" id="latest"></div>
+<div class="see-more" onclick="showAll('latest')">See More</div>
+</div>
+
+<!-- ⭐ Featured (শুধু যেগুলো featured = true) -->
+<div class="section">
+<h2>⭐ Featured</h2>
+<div class="scroll" id="featured"></div>
+<div class="see-more" onclick="showAll('featured')">See More</div>
+</div>
+
+<!-- 🚀 Sci-Fi (category = sci) -->
+<div class="section">
+<h2>🚀 Sci-Fi</h2>
+<div class="scroll" id="sci"></div>
+<div class="see-more" onclick="showAll('sci')">See More</div>
+</div>
+
+<!-- 🌐 All (সব গল্প) -->
+<div class="section">
+<h2>🌐 All</h2>
+<div class="scroll" id="all"></div>
+<div class="see-more" onclick="showAll('all')">See More</div>
+</div>
+
+<!-- ========== ফুটার ========== -->
+<footer>
+
+<!-- 📝 গল্প জমা দেওয়ার লিংক (গুগল ফর্ম) -->
+<a href="https://forms.gle/fXZ28mAu7d5E2xuC8" target="_blank"
+style="background:#38bdf8;padding:10px;border-radius:6px;color:black;">
+📝 নিজের গল্প জমা দিন
+</a>
+
+<p>⚠️ গল্পের দায় সম্পূর্ণ লেখকের নিজের</p>
+
+<!-- 📩 অভিযোগ/মতামত ফর্ম (টগল করে খোলা যায়) -->
+<div style="margin-top:30px;">
+<h3>📩 অভিযোগ / মতামত</h3>
+<button onclick="toggleForm()">👉 এখানে ক্লিক করুন</button>
+
+<form id="contactForm" action="https://formspree.io/f/mpqowyld" method="POST" style="display:none;">
+<input type="text" name="name" placeholder="নাম" required>
+<input type="email" name="email" placeholder="ইমেইল">
+<textarea name="message" placeholder="বার্তা..." required></textarea>
+<button type="submit">📤 পাঠান</button>
+</form>
+</div>
+
+<p>© 2026 Bangla Golpo Galaxy ✨</p>
+</footer>
+
+<!-- ✅ সফলতা পপআপ -->
+<div id="popup">
+✅ ধন্যবাদ! আপনার বার্তা সফলভাবে পাঠানো হয়েছে!<br>
 <button onclick="closePopup()">OK</button>
 </div>
 
-<p style="margin-top:20px;">© 2026 Bangla Golpo Galaxy</p>
-
-</footer>
-
 <script>
-
-// 🌙 AUTO DARK MODE
-if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-document.body.classList.add("dark-mode");
-}
-
-// 📚 STORIES
+// ==================================================
+// 📚 গল্পের ডাটাবেস – এখানে সব গল্পের তথ্য থাকবে
+// ==================================================
 const stories = [
-{
-title:"অদৃশ্য জগতের দ্বার",
-image:"Card1.jpg",
-link:"part1.html",
-category:"sci",
-featured:true
-}
+  // ⭐ নতুন গল্প যোগ করতে হলে এখানে নতুন অবজেক্ট যোগ করুন।
+  //    সবচেয়ে নতুন গল্প অ্যারের **শুরুতে** রাখুন, তাহলে Latest সেকশনে প্রথমে দেখাবে।
+  {
+    title:"অদৃশ্য জগতের দ্বার",     // গল্পের নাম
+    image:"Card1.jpg",               // কার্ডের ছবির ফাইল নাম (পাথ)
+    link:"part1.html",               // গল্পের HTML ফাইলের লিংক
+    category:"sci",                 // কোন ক্যাটাগরিতে দেখাবে (sci / horror / romantic ...)
+    featured:true,                  // true = ফিচার্ড সেকশনে দেখাবে, false = দেখাবে না
+    tags:["sci","mystery"]          // সার্চের জন্য ট্যাগ (কমা দিয়ে পৃথক)
+  }
+  // 👇 নতুন গল্প এখানে যোগ করুন (শুরুতে)
+  // {
+  //   title:"আরেকটি গল্প",
+  //   image:"another.jpg",
+  //   link:"another.html",
+  //   category:"sci",
+  //   featured:false,
+  //   tags:["sci","adventure"]
+  // }
 ];
 
-// 🎴 CARD
+// ==================================================
+// 🎴 কার্ড তৈরি ফাংশন
+// ==================================================
 function card(s){
-return `
-<div class="card">
-<img src="${s.image}" loading="lazy">
-<h3>${s.title}</h3>
-<a href="${s.link}" class="btn">পড়ুন</a>
-</div>`;
+  return `
+  <div class="card">
+    <img src="${s.image}" loading="lazy">
+    <h3>${s.title}</h3>
+    <a href="${s.link}" class="btn">📖 পড়ুন</a>
+  </div>`;
 }
 
-// LOAD STORIES
-stories.forEach(s=>{
-latest.innerHTML+=card(s);
-all.innerHTML+=card(s);
-if(s.featured) featured.innerHTML+=card(s);
-if(s.category==="sci") sci.innerHTML+=card(s);
+// ==================================================
+// 🔄 পেজ লোড হওয়ার সময় প্রতিটি সেকশনে প্রথম ৫টি গল্প দেখাবে
+// ==================================================
+function load(){
+  const latestDiv = document.getElementById("latest");
+  const featuredDiv = document.getElementById("featured");
+  const sciDiv = document.getElementById("sci");
+  const allDiv = document.getElementById("all");
+
+  latestDiv.innerHTML = "";
+  featuredDiv.innerHTML = "";
+  sciDiv.innerHTML = "";
+  allDiv.innerHTML = "";
+
+  // Latest: অ্যারের প্রথম ৫টি
+  stories.slice(0,5).forEach(s => latestDiv.innerHTML += card(s));
+
+  // Featured: যাদের featured = true, তাদের থেকে প্রথম ৫টি
+  stories.filter(s => s.featured).slice(0,5).forEach(s => featuredDiv.innerHTML += card(s));
+
+  // Sci-Fi: যাদের category = "sci", প্রথম ৫টি
+  stories.filter(s => s.category === "sci").slice(0,5).forEach(s => sciDiv.innerHTML += card(s));
+
+  // All: প্রথম ৫টি
+  stories.slice(0,5).forEach(s => allDiv.innerHTML += card(s));
+}
+
+// ==================================================
+// 👉 See More বাটন: সংশ্লিষ্ট সেকশনের সব গল্প দেখাবে
+// ==================================================
+function showAll(type){
+  let list = [];
+  if(type === "latest") list = stories;
+  if(type === "featured") list = stories.filter(s => s.featured);
+  if(type === "sci") list = stories.filter(s => s.category === "sci");
+  if(type === "all") list = stories;
+
+  const container = document.getElementById(type);
+  container.innerHTML = "";
+  list.forEach(s => container.innerHTML += card(s));
+}
+
+// ==================================================
+// 🔍 সার্চ ফাংশন: টাইটেল বা ট্যাগ অনুসারে গল্প খুঁজে Latest সেকশনে দেখায়
+// ==================================================
+document.getElementById("search").addEventListener("input", e => {
+  const val = e.target.value.toLowerCase();
+  const filtered = stories.filter(s =>
+    s.title.toLowerCase().includes(val) ||
+    s.tags.join(" ").toLowerCase().includes(val)
+  );
+  const latestDiv = document.getElementById("latest");
+  latestDiv.innerHTML = "";
+  filtered.forEach(s => latestDiv.innerHTML += card(s));
 });
 
-// 📩 FORM SUBMIT
-const form=document.getElementById("contactForm");
+// ==================================================
+// 📩 ফর্ম টগল (দেখানো/লুকানো)
+// ==================================================
+function toggleForm(){
+  const f = document.getElementById("contactForm");
+  f.style.display = f.style.display === "none" ? "block" : "none";
+}
 
-form.addEventListener("submit", async function(e){
-e.preventDefault();
+// ==================================================
+// 📤 ফর্ম সাবমিট (Formspree.io-তে ডাটা পাঠায়)
+// ==================================================
+const form = document.getElementById("contactForm");
+form.addEventListener("submit", async e => {
+  e.preventDefault();
 
-const data=new FormData(form);
+  await fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  });
 
-await fetch(form.action,{
-method:"POST",
-body:data,
-headers:{'Accept':'application/json'}
+  form.reset();
+  document.getElementById("popup").style.display = "block";
 });
 
-form.reset();
-document.getElementById("popup").style.display="block";
-});
-
-// CLOSE POPUP
+// ==================================================
+// ❌ পপআপ বন্ধ করা
+// ==================================================
 function closePopup(){
-document.getElementById("popup").style.display="none";
+  document.getElementById("popup").style.display = "none";
 }
 
+// পেজ লোড হওয়ার সময় লোড ফাংশন কল
+load();
 </script>
 
 </body>
