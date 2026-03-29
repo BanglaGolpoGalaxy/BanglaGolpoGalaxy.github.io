@@ -1,359 +1,454 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Part 1 - অজানার পথে</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      padding: 20px;
-      font-family: 'Noto Sans Bengali', sans-serif;
-      background-color: #ffffff;
-      color: #000000;
-      line-height: 1.6;
-    }
+<title>Part 4 - অদ্ভুত হাউজা জাতি | অদৃশ্য জগতের দ্বার</title>
 
-    .container {
-      max-width: 800px;
-      margin: auto;
-    }
+<meta name="description" content="অদ্ভুত এক জাতির সন্ধান... যারা মানুষের মতো, কিন্তু সম্পূর্ণ আলাদা। তাদের রহস্য আরও ভয়ংকর।">
+<meta name="keywords" content="ভৌতিক গল্প বাংলা, রহস্য গল্প, অদ্ভুত জাতি">
+<meta name="robots" content="index, follow">
 
-    h1 {
-      text-align: center;
-      font-size: 28px;
-    }
+<meta property="og:title" content="অদৃশ্য জগতের দ্বার - Part 4">
+<meta property="og:description" content="অজানা এক জাতির মুখোমুখি...">
+<meta property="og:image" content="part4.jpg">
 
-    h2 {
-      text-align: center;
-      color: blue;
-      margin-bottom: 20px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
 
-    .story-image {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+<style>
 
-    .story-image img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .story-text {
-      font-size: 18px;
-      text-align: justify;
-    }
-    
-
-    .nav-buttons {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 40px;
-    }
-
-    .nav-buttons a {
-      text-decoration: none;
-      padding: 10px 15px;
-      background-color: #007BFF;
-      color: white;
-      border-radius: 6px;
-      font-size: 14px;
-    }
-
-    .nav-buttons a:hover {
-      background-color: #0056b3;
-    }
-
-    .home-btn {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .home-btn a {
-      text-decoration: none;
-      padding: 10px 20px;
-      background-color: #28a745;
-      color: white;
-      border-radius: 6px;
-    }
-
-    .home-btn a:hover {
-      background-color: #1e7e34;
-    }
-
-@media (max-width: 600px) {
-
-  body {
-    padding: 15px;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
-  .story-text {
-    font-size: 16px;
-  }
-
-  .nav-buttons a {
-    padding: 8px 10px;
-    font-size: 13px;
-  }
-
+body{
+margin:0;
+padding:20px;
+font-family:'Noto Sans Bengali', sans-serif;
+line-height:1.8;
+background:white;
+color:black;
+transition:0.3s;
 }
-  </style>
+
+.container{max-width:800px;margin:auto;}
+
+.dark-mode{
+background:#020617;
+color:white;
+}
+
+/* PROGRESS */
+#progress{
+position:fixed;
+top:0;
+left:0;
+height:4px;
+background:#ff7a00;
+width:0%;
+z-index:999;
+}
+
+h1{text-align:center;}
+h2{text-align:center;color:#ff7a00;}
+
+.hook{
+font-size:18px;
+font-weight:bold;
+color:#2563eb;
+}
+
+img{
+width:100%;
+border-radius:10px;
+margin:15px 0;
+}
+
+p{margin-bottom:14px;}
+
+/* NAV ROW */
+.nav-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:40px;
+}
+
+.nav-row a{
+padding:8px 14px;
+font-size:14px;
+border-radius:6px;
+text-decoration:none;
+color:white;
+}
+
+/* BLUE PREVIOUS */
+.prev-btn{
+background:#2563eb;
+}
+
+/* ORANGE NEXT */
+.next-btn{
+background:#ff7a00;
+}
+
+/* HOME */
+.home{text-align:center;margin-top:20px;}
+.home a{
+background:#22c55e;
+padding:10px 20px;
+color:white;
+border-radius:8px;
+text-decoration:none;
+}
+
+/* SHARE */
+.share{text-align:center;margin-top:15px;}
+
+.comment-text{
+margin-top:20px;
+font-size:14px;
+text-align:center;
+color:#64748b;
+}
+
+.dark-mode .comment-text{
+color:#94a3b8;
+}
+
+/* RELATED */
+.related{
+margin-top:40px;
+padding:15px;
+border-radius:10px;
+background:#f1f5f9;
+}
+.dark-mode .related{
+background:#0f172a;
+}
+
+.related a{
+display:block;
+margin-top:8px;
+text-decoration:none;
+color:#2563eb;
+}
+
+/* STYLED DARK MODE BUTTON */
+.mode-btn {
+  background: #334155;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.dark-mode .mode-btn {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+</style>
+
 </head>
 
 <body>
 
-  <div class="container">
+<div id="progress"></div>
 
-    <!-- 🔥 Title -->
-    <h1>অদৃশ্য জগতের দ্বার</h1>
+<div style="text-align:right;">
+  <button class="mode-btn" onclick="toggleDark()">🌙 Mode</button>
+</div>
 
-    <!-- 🔥 Subtitle -->
-    <h2>Part 4 - অদ্ভুত হাউজা জাতি</h2>
+<div class="container">
 
-    <!-- 🖼 Image -->
-    <div class="story-image">
-      <img src="IMG_20260324_140014.jpg" alt="Story Image">
-    </div>
+<h1>অদৃশ্য জগতের দ্বার</h1>
+<h2>Part 4 - অদ্ভুত হাউজা জাতি</h2>
 
-    <!-- 📖 Story -->
-    <div class="story-text">
-   
-  সকালের আলো পুরোপুরি ফুটে ওঠার আগেই আমরা রওনা দিয়েছিলাম। আকাশে তখনো হালকা কুয়াশা ঝুলে আছে, আর মাটির ওপর জমে থাকা শিশিরে পা পড়লেই একটা ঠান্ডা শিরশিরে অনুভূতি হচ্ছিল। গতকালের সেই জায়গাটা যেন আমাদের ডাকছিল—অদৃশ্য কোনো শক্তির টানে আমরা আবারও ফিরে যাচ্ছিলাম সেই রহস্যের দিকে।<br>
-    <!--Tab to edit-->
-  </br>
-যখন আমরা সেই ফাঁকা, ঢেউ খেলানো জমিটায় পৌঁছালাম, তখন চারপাশটা অস্বাভাবিকভাবে নিস্তব্ধ। বাতাস আছে, কিন্তু শব্দ নেই। পাখির ডাক নেই, পাতার মর্মর নেই—শুধু এক ধরনের চাপা শূন্যতা, যা বুকের ভেতর ভারি হয়ে বসে থাকে।<br>
-  <!--Tab to edit-->
-</br>
-আমরা ধীরে ধীরে এগোতে লাগলাম। হঠাৎ আমার চোখ পড়ল—দূরে কয়েকটা অবয়ব নড়ছে।<br>
-  <!--Tab to edit-->
-</br>
-আমি হাত তুলে সবাইকে থামতে বললাম।<br>
-  <!--Tab to edit-->
-</br>
- “ওদিকে দেখ…”<br>
-   <!--Tab to edit-->
- </br>
-সবাই তাকালো।<br>
-  <!--Tab to edit-->
-</br>
-দূরে, হালকা কুয়াশার ভেতর, কয়েকজন মানুষ ঘুরে বেড়াচ্ছে। কিন্তু তারা সাধারণ মানুষ নয়—প্রথম দেখাতেই বোঝা যাচ্ছিল। তাদের গঠন অস্বাভাবিকভাবে লিকলিকে, ছোটখাটো, যেন শরীরের মাংসপেশি ঠিকমতো গড়ে ওঠেনি। হাত-পা সরু, হাঁটার ভঙ্গি অদ্ভুত, প্রায় যান্ত্রিক।<br>
-  <!--Tab to edit-->
-</br>
-তাদের সবচেয়ে অদ্ভুত দিক ছিল মাথা। প্রত্যেকের মাথায় শক্ত করে বাঁধা এক ধরনের কাপড়—দেখতে সাধারণ নেকড়ার মতো, কিন্তু সেটা এমনভাবে জড়ানো যে মাথার প্রায় পুরো অংশ ঢেকে রেখেছে। সেই কাপড়ের নিচে যেন কিছু একটা স্পন্দিত হচ্ছে… যেন ওটা শুধু কাপড় নয়, বরং কোনো যন্ত্র।<br>
-  <!--Tab to edit-->
-</br>
-আর তাদের কান…
- স্বাভাবিক মানুষের তুলনায় একটু বড়, লম্বাটে, সামান্য বাইরের দিকে বেরোনো।<br>
-   <!--Tab to edit-->
- </br>
-আমার বুকের ভেতর ধক করে উঠল।<br>
-  <!--Tab to edit-->
-</br>
- “এরা… মানুষ না।”<br>
-   <!--Tab to edit-->
- </br>
-আমার এক সঙ্গী ফিসফিস করে বলল, “তাহলে?”<br>
-  <!--Tab to edit-->
-</br>
-আমি চোখ না সরিয়েই বললাম,<br>
-  <!--Tab to edit-->
-</br>
- “হাউজা জাতি…”<br>
-   <!--Tab to edit-->
- </br>
-শব্দটা আমার নিজের কাছেই অচেনা লাগছিল, কিন্তু অদ্ভুতভাবে ঠিক মনে হচ্ছিল।<br>
-  <!--Tab to edit-->
-</br>
-আমরা লক্ষ্য করলাম—তারা যেন কিছু খুঁজছে, আবার যেন কিছু পাহারা দিচ্ছে। তাদের চলাফেরা এলোমেলো, কিন্তু তবুও একটা অদৃশ্য নিয়ম মেনে চলছে। কেউ কারো সাথে কথা বলছে না, তবুও তারা যেন একে অপরকে বুঝতে পারছে।<br>
-  <!--Tab to edit-->
-</br>
-হঠাৎ পাশের একজন খুব নিচু স্বরে বলল,<br>
-  <!--Tab to edit-->
-</br>
- “দেখেছ? ওদের চোখ…”<br>
-   <!--Tab to edit-->
- </br>
-আমি ভালো করে তাকালাম।<br>
-  <!--Tab to edit-->
-</br>
- ওদের চোখে এক ধরনের শূন্যতা। কোনো অনুভূতি নেই, কোনো প্রশ্ন নেই—শুধু স্থির, নিষ্প্রাণ দৃষ্টি। যেন তারা নিজেরা নিজেদের নিয়ন্ত্রণে নেই।<br>
-   <!--Tab to edit-->
- </br>
-তখনই আমার মাথায় একটা ভাবনা এলো।
-ওদের মাথায় বাঁধা ওই কাপড়…
- ওটাই আসল রহস্য।<br>
-   <!--Tab to edit-->
- </br>
-আমি ধীরে ধীরে বললাম,<br>
-  <!--Tab to edit-->
-</br>
- “ওই কাপড়টা… ওটা শুধু কাপড় না। ওটা ওদের কন্ট্রোল করছে।”<br>
-   <!--Tab to edit-->
- </br>
-আমার কথা শুনে সবাই চুপ হয়ে গেল।<br>
-  <!--Tab to edit-->
-</br>
-“ওদের মস্তিষ্ককে এমনভাবে পরিবর্তন করা হয়েছে… যাতে তারা সব ধরনের ফ্রিকোয়েন্সি অনুভব করতে পারে। শুধু শোনা নয়—অনুভব করা, বুঝতে পারা, এমনকি দূর থেকে যোগাযোগ করা।”<br>
-  <!--Tab to edit-->
-</br>
-একজন অবাক হয়ে বলল,<br>
-  <!--Tab to edit-->
-</br>
- “মানে… ওরা একে অপরের সাথে কথা না বলেও যোগাযোগ করতে পারে?”<br>
-   <!--Tab to edit-->
- </br>
-আমি মাথা নাড়লাম।<br>
-  <!--Tab to edit-->
-</br>
- “হ্যাঁ… সম্ভবত।”<br>
-   <!--Tab to edit-->
- </br>
-কিন্তু তখনই একটা জিনিস আমাদের চোখে পড়ল।<br>
-  <!--Tab to edit-->
-</br>
-হঠাৎ দূরে কোথাও একটা তীক্ষ্ণ শব্দ হলো—হয়তো কোনো ধাতব কিছু পড়ে গিয়েছিল।
-আর সঙ্গে সঙ্গে ওদের আচরণ বদলে গেল।
-তারা সবাই থমকে দাঁড়ালো। তারপর একসাথে মাথা চেপে ধরল। কারো কারো শরীর কাঁপতে লাগল, কেউ মাটিতে বসে পড়ল। তাদের মুখ বিকৃত হয়ে গেল—যেন অসহ্য যন্ত্রণায় ছটফট করছে।<br>
-  <!--Tab to edit-->
-</br>
-“ওরা… সহ্য করতে পারছে না…”<br>
-  <!--Tab to edit-->
-</br>
-আমি ফিসফিস করে বললাম।<br>
-  <!--Tab to edit-->
-</br>
-“উচ্চ ফ্রিকোয়েন্সির শব্দ… ওদের জন্য বিষের মতো।”<br>
-  <!--Tab to edit-->
-</br>
-আমরা নিঃশ্বাস বন্ধ করে সেই দৃশ্য দেখছিলাম। কয়েক সেকেন্ড পর শব্দটা থেমে যেতেই তারা ধীরে ধীরে আবার স্বাভাবিক হয়ে গেল। যেন কিছুই ঘটেনি। আবার আগের মতোই হাঁটতে শুরু করল।<br>
-  <!--Tab to edit-->
-</br>
-আমার শরীর কেঁপে উঠল।<br>
-  <!--Tab to edit-->
-</br>
-এটা কোনো সাধারণ জাতি নয়।<br>
-  <!--Tab to edit-->
-</br>
- এরা তৈরি করা হয়েছে… বদলে দেওয়া হয়েছে…<br>
-   <!--Tab to edit-->
- </br>
-হঠাৎ আমার চোখ পড়ল তাদের মধ্যে একজনের ওপর।<br>
-  <!--Tab to edit-->
-</br>
-সে অন্যদের মতো নয়।<br>
-  <!--Tab to edit-->
-</br>
- সে লম্বা… অস্বাভাবিকভাবে লম্বা।
-আর সে নড়ছে না।
- স্থির হয়ে দাঁড়িয়ে আছে।
-তার মুখ আকাশের দিকে তোলা… যেন সে কিছু অনুভব করছে, কিছু শুনছে… যা আমরা শুনতে পাচ্ছি না।<br>
-  <!--Tab to edit-->
-</br>
-আমার বুকের ভেতর একটা চাপা অস্বস্তি তৈরি হলো।<br>
-  <!--Tab to edit-->
-</br>
-লোকটা ধীরে ধীরে আমাদের দিকেই মাথা ঘোরাল।<br>
-  <!--Tab to edit-->
-</br>
-আমাদের চোখের সাথে তার চোখ মেলামাত্র আমার মনে হলো—<br>
-  <!--Tab to edit-->
-</br>
- সে জানে আমরা এখানে আছি।<br>
-   <!--Tab to edit-->
- </br>
-আর সেই মুহূর্তে আমি বুঝে গেলাম—
- আমরা শুধু তাদের দেখছি না…
-তারা আমাদেরও অনুভব করছে।<be>
-  <!--Tab to edit-->
-</be>
-আমার চোখ তখন সেই লম্বা লোকটার ওপর।<br>
-  <!--Tab to edit-->
-</br>
+<p class="hook">
+ওরা মানুষ নয়… আবার পুরোপুরি অমানুষও নয়।<br>
+ওদের চোখে কোনো অনুভূতি নেই—কিন্তু তারা সব অনুভব করতে পারে।<br>
+আর সবচেয়ে ভয়ের বিষয়—<br>
+👉 তারা আমাদের উপস্থিতিও টের পায়।
+</p>
 
-সে অন্যদের মতো নয়।
-সে অদৃশ্য হচ্ছে না।
+<img src="part4.jpg" loading="lazy">
 
-সে দাঁড়িয়ে আছে…
-আকাশের দিকে তাকিয়ে।
+<div class="story">
 
-যেন সে কিছু ভাবছে…
-বা অপেক্ষা করছে।<br>
-  <!--Tab to edit-->
-</br>
+<p>ওরা মানুষ… কিন্তু আবার মানুষ নয়।</p>
 
-আমি ধীরে ধীরে তার দিকে এগিয়ে গেলাম।<br>
-  <!--Tab to edit-->
-</br>
+<p>ওদের চোখে প্রাণ নেই, তবুও তারা সব অনুভব করছে—আমাদের উপস্থিতিও।</p>
 
-“এই যে… শুনছেন?”<br>
-  <!--Tab to edit-->
-</br>
+<p>আর তখনই বুঝলাম—আমরা শুধু রহস্যের কাছে আসিনি… আমরা নিজেরাই এখন সেই রহস্যের অংশ।</p>
 
-সে ধীরে মাথা ঘুরিয়ে আমার দিকে তাকাল।
+<p>সকালের আলো পুরোপুরি ফুটে ওঠার আগেই আমরা রওনা দিয়েছিলাম।</p>
 
-তার চোখে ভয়।<br>
-  <!--Tab to edit-->
-</br>
+<p>আকাশে তখনো হালকা কুয়াশা ঝুলে আছে, আর মাটির ওপর জমে থাকা শিশিরে পা পড়লেই একটা ঠান্ডা শিরশিরে অনুভূতি হচ্ছিল।</p>
 
-হ্যাঁ—ভয়।<br>
-  <!--Tab to edit-->
-</br>
+<p>গতকালের সেই জায়গাটা যেন আমাদের ডাকছিল—অদৃশ্য কোনো শক্তির টানে আমরা আবারও ফিরে যাচ্ছিলাম সেই রহস্যের দিকে।</p>
 
-“এখান থেকে চলে যান…”<br>
-  <!--Tab to edit-->
-</br>
-তার কণ্ঠ কাঁপছিল।<br>
-  <!--Tab to edit-->
-</br>
-“এখানে কিছু নেই… আর যা আছে… সেটা আপনারা বুঝতে পারবেন না।”<br>
-  <!--Tab to edit-->
-</br>
+<p>যখন আমরা সেই ফাঁকা, ঢেউ খেলানো জমিটায় পৌঁছালাম, তখন চারপাশটা অস্বাভাবিকভাবে নিস্তব্ধ।</p>
 
-আমি এগিয়ে গেলাম।<br>
-  <!--Tab to edit-->
-</br>
-“আপনি কে?”<br>
-  <!--Tab to edit-->
-</br>
+<p>বাতাস আছে, কিন্তু শব্দ নেই।</p>
 
-সে হঠাৎ কঠিন হয়ে গেল।<br>
-  <!--Tab to edit-->
-</br>
-“যাও!”<br>
-  <!--Tab to edit-->
-</br>
+<p>পাখির ডাক নেই, পাতার মর্মর নেই—শুধু এক ধরনের চাপা শূন্যতা, যা বুকের ভেতর ভারি হয়ে বসে থাকে।</p>
 
-তারপর ঘুরে হাঁটতে শুরু করল।
+<p>আমরা ধীরে ধীরে এগোতে লাগলাম।</p>
 
-আমরা তাকে অনুসরণ করলাম।
+<p>হঠাৎ আমার চোখ পড়ল—দূরে কয়েকটা অবয়ব নড়ছে।</p>
 
+<p>আমি হাত তুলে সবাইকে থামতে বললাম।</p>
 
-    </div>
+<p>“ওদিকে দেখ…”</p>
 
-    <!-- 🔘 Navigation -->
-    <div class="nav-buttons">
-      <a href="part3.html">⬅ Previous</a>
-      <a href="index.html">Next ➡</a>
-    </div>
+<p>সবাই তাকালো।</p>
 
-    <!-- 🏠 Home Button -->
-    <div class="home-btn">
-      <a href="index.html">🏠 Home</a>
-    </div>
+<p>দূরে, হালকা কুয়াশার ভেতর, কয়েকজন মানুষ ঘুরে বেড়াচ্ছে।</p>
 
-  </div>
+<p>কিন্তু তারা সাধারণ মানুষ নয়—প্রথম দেখাতেই বোঝা যাচ্ছিল।</p>
+
+<p>তাদের গঠন অস্বাভাবিকভাবে লিকলিকে, ছোটখাটো, যেন শরীরের মাংসপেশি ঠিকমতো গড়ে ওঠেনি।</p>
+
+<p>হাত-পা সরু, হাঁটার ভঙ্গি অদ্ভুত, প্রায় যান্ত্রিক।</p>
+
+<p>তাদের সবচেয়ে অদ্ভুত দিক ছিল মাথা।</p>
+
+<p>প্রত্যেকের মাথায় শক্ত করে বাঁধা এক ধরনের কাপড়—দেখতে সাধারণ নেকড়ার মতো, কিন্তু সেটা এমনভাবে জড়ানো যে মাথার প্রায় পুরো অংশ ঢেকে রেখেছে।</p>
+
+<p>সেই কাপড়ের নিচে যেন কিছু একটা স্পন্দিত হচ্ছে… যেন ওটা শুধু কাপড় নয়, বরং কোনো যন্ত্র।</p>
+
+<p>আর তাদের কান…</p>
+
+<p>স্বাভাবিক মানুষের তুলনায় একটু বড়, লম্বাটে, সামান্য বাইরের দিকে বেরোনো।</p>
+
+<p>আমার বুকের ভেতর ধক করে উঠল।</p>
+
+<p>“এরা… মানুষ না।”</p>
+
+<p>আমার এক সঙ্গী ফিসফিস করে বলল, “তাহলে?”</p>
+
+<p>আমি চোখ না সরিয়েই বললাম,</p>
+
+<p>“হাউজা জাতি…”</p>
+
+<p>শব্দটা আমার নিজের কাছেই অচেনা লাগছিল, কিন্তু অদ্ভুতভাবে ঠিক মনে হচ্ছিল।</p>
+
+<p>আমরা লক্ষ্য করলাম—তারা যেন কিছু খুঁজছে, আবার যেন কিছু পাহারা দিচ্ছে।</p>
+
+<p>তাদের চলাফেরা এলোমেলো, কিন্তু তবুও একটা অদৃশ্য নিয়ম মেনে চলছে।</p>
+
+<p>কেউ কারো সাথে কথা বলছে না, তবুও তারা যেন একে অপরকে বুঝতে পারছে।</p>
+
+<p>হঠাৎ পাশের একজন খুব নিচু স্বরে বলল,</p>
+
+<p>“দেখেছ? ওদের চোখ…”</p>
+
+<p>আমি ভালো করে তাকালাম।</p>
+
+<p>ওদের চোখে এক ধরনের শূন্যতা।</p>
+
+<p>কোনো অনুভূতি নেই, কোনো প্রশ্ন নেই—শুধু স্থির, নিষ্প্রাণ দৃষ্টি।</p>
+
+<p>যেন তারা নিজেরা নিজেদের নিয়ন্ত্রণে নেই।</p>
+
+<p>তখনই আমার মাথায় একটা ভাবনা এলো।</p>
+
+<p>ওদের মাথায় বাঁধা ওই কাপড়…</p>
+
+<p>ওটাই আসল রহস্য।</p>
+
+<p>আমি ধীরে ধীরে বললাম,</p>
+
+<p>“ওই কাপড়টা… ওটা শুধু কাপড় না। ওটা ওদের কন্ট্রোল করছে।”</p>
+
+<p>আমার কথা শুনে সবাই চুপ হয়ে গেল।</p>
+
+<p>“ওদের মস্তিষ্ককে এমনভাবে পরিবর্তন করা হয়েছে… যাতে তারা সব ধরনের ফ্রিকোয়েন্সি অনুভব করতে পারে।”</p>
+
+<p>“শুধু শোনা নয়—অনুভব করা, বুঝতে পারা, এমনকি দূর থেকে যোগাযোগ করা।”</p>
+
+<p>একজন অবাক হয়ে বলল,</p>
+
+<p>“মানে… ওরা একে অপরের সাথে কথা না বলেও যোগাযোগ করতে পারে?”</p>
+
+<p>আমি মাথা নাড়লাম।</p>
+
+<p>“হ্যাঁ… সম্ভবত।”</p>
+
+<p>কিন্তু তখনই একটা জিনিস আমাদের চোখে পড়ল।</p>
+
+<p>হঠাৎ দূরে কোথাও একটা তীক্ষ্ণ শব্দ হলো—হয়তো কোনো ধাতব কিছু পড়ে গিয়েছিল।</p>
+
+<p>আর সঙ্গে সঙ্গে ওদের আচরণ বদলে গেল।</p>
+
+<p>তারা সবাই থমকে দাঁড়ালো।</p>
+
+<p>তারপর একসাথে মাথা চেপে ধরল।</p>
+
+<p>কারো কারো শরীর কাঁপতে লাগল, কেউ মাটিতে বসে পড়ল।</p>
+
+<p>তাদের মুখ বিকৃত হয়ে গেল—যেন অসহ্য যন্ত্রণায় ছটফট করছে।</p>
+
+<p>“ওরা… সহ্য করতে পারছে না…”</p>
+
+<p>আমি ফিসফিস করে বললাম।</p>
+
+<p>“উচ্চ ফ্রিকোয়েন্সির শব্দ… ওদের জন্য বিষের মতো।”</p>
+
+<p>আমরা নিঃশ্বাস বন্ধ করে সেই দৃশ্য দেখছিলাম।</p>
+
+<p>কয়েক সেকেন্ড পর শব্দটা থেমে যেতেই তারা ধীরে ধীরে আবার স্বাভাবিক হয়ে গেল।</p>
+
+<p>যেন কিছুই ঘটেনি।</p>
+
+<p>আবার আগের মতোই হাঁটতে শুরু করল।</p>
+
+<p>আমার শরীর কেঁপে উঠল।</p>
+
+<p>এটা কোনো সাধারণ জাতি নয়।</p>
+
+<p>এরা তৈরি করা হয়েছে… বদলে দেওয়া হয়েছে…</p>
+
+<p>হঠাৎ আমার চোখ পড়ল তাদের মধ্যে একজনের ওপর।</p>
+
+<p>সে অন্যদের মতো নয়।</p>
+
+<p>সে লম্বা… অস্বাভাবিকভাবে লম্বা।</p>
+
+<p>আর সে নড়ছে না।</p>
+
+<p>স্থির হয়ে দাঁড়িয়ে আছে।</p>
+
+<p>তার মুখ আকাশের দিকে তোলা… যেন সে কিছু অনুভব করছে, কিছু শুনছে… যা আমরা শুনতে পাচ্ছি না।</p>
+
+<p>আমার বুকের ভেতর একটা চাপা অস্বস্তি তৈরি হলো।</p>
+
+<p>লোকটা ধীরে ধীরে আমাদের দিকেই মাথা ঘোরাল।</p>
+
+<p>আমাদের চোখের সাথে তার চোখ মেলামাত্র আমার মনে হলো—</p>
+
+<p>সে জানে আমরা এখানে আছি।</p>
+
+<p>আর সেই মুহূর্তে আমি বুঝে গেলাম—</p>
+
+<p>আমরা শুধু তাদের দেখছি না…</p>
+
+<p>তারা আমাদেরও অনুভব করছে।</p>
+
+<p>আমার চোখ তখন সেই লম্বা লোকটার ওপর।</p>
+
+<p>সে অন্যদের মতো নয়।</p>
+
+<p>সে অদৃশ্য হচ্ছে না।</p>
+
+<p>সে দাঁড়িয়ে আছে… আকাশের দিকে তাকিয়ে।</p>
+
+<p>যেন সে কিছু ভাবছে… বা অপেক্ষা করছে।</p>
+
+<p>আমি ধীরে ধীরে তার দিকে এগিয়ে গেলাম।</p>
+
+<p>“এই যে… শুনছেন?”</p>
+
+<p>সে ধীরে মাথা ঘুরিয়ে আমার দিকে তাকাল।</p>
+
+<p>তার চোখে ভয়।</p>
+
+<p>হ্যাঁ—ভয়।</p>
+
+<p>“এখান থেকে চলে যান…”</p>
+
+<p>তার কণ্ঠ কাঁপছিল।</p>
+
+<p>“এখানে কিছু নেই… আর যা আছে… সেটা আপনারা বুঝতে পারবেন না।”</p>
+
+<p>আমি এগিয়ে গেলাম।</p>
+
+<p>“আপনি কে?”</p>
+
+<p>সে হঠাৎ কঠিন হয়ে গেল।</p>
+
+<p>“যাও!”</p>
+
+<p>তারপর ঘুরে হাঁটতে শুরু করল।</p>
+
+<p>আমরা তাকে অনুসরণ করলাম।</p>
+
+</div>
+
+<!-- RELATED (only next part, matching Part 2/3) -->
+<div class="related">
+<h3>📚 পরবর্তী অংশ</h3>
+<a href="part5.html">👉 Part 5 - পরবর্তী রহস্য</a>
+</div>
+
+<!-- NAVIGATION ROW (English text, same as Part 2/3) -->
+<div class="nav-row">
+<a href="part3.html" class="prev-btn">⬅ Previous</a>
+<a href="part5.html" class="next-btn">Continue ➡</a>
+</div>
+
+<!-- HOME (English text) -->
+<div class="home">
+<a href="index.html">🏠 Home</a>
+</div>
+
+<!-- SHARE (using shareNow with native share first) -->
+<div class="share">
+<button onclick="shareNow()">📲 Share</button>
+</div>
+
+<p class="comment-text">
+💬 আপনার মতামত জানান
+</p>
+
+<div id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="6bf38bc4-dcc7-46ff-b711-47dcda6d2f5a"
+  data-page-id="part4"
+  data-page-url="https://banglagolpogalaxy.github.io/part4.html"
+  data-page-title="অদৃশ্য জগতের দ্বার - Part 4"
+  data-theme="auto">
+</div>
+
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+<script>
+
+window.onscroll=()=>{
+let s=document.documentElement;
+document.getElementById("progress").style.width=
+(s.scrollTop/(s.scrollHeight-s.clientHeight))*100+"%";
+}
+
+if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+document.body.classList.add("dark-mode");
+}
+
+function toggleDark(){
+document.body.classList.toggle("dark-mode");
+
+const cusdis=document.getElementById("cusdis_thread");
+cusdis.innerHTML="";
+if(window.CUSDIS){
+window.CUSDIS.renderTo(cusdis);
+}
+}
+
+function shareNow(){
+const url=location.href;
+
+if(navigator.share){
+navigator.share({title: document.title, url});
+}else{
+navigator.clipboard.writeText(url);
+alert("Link copied!");
+}
+}
+
+</script>
 
 </body>
-    </html>
+</html>
