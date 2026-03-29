@@ -10,7 +10,7 @@
 <meta name="description" content="অদৃশ্য জগতের দ্বার Part 1 - রহস্যময় যাত্রার শুরু">
 <meta property="og:title" content="অদৃশ্য জগতের দ্বার - Part 1">
 <meta property="og:description" content="একটি রহস্যময় অভিযানের শুরু...">
-<meta property="og:image" content="AjanarPothe.jpg">
+<meta property="og:image" content="IMG_20260323_124840.jpg">
 
 <!-- FONT FIX -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
@@ -66,13 +66,38 @@ margin:15px 0;
 p{
 margin-bottom:14px;
 }
-/* RELATED */
+
+/* RELATED BOX - LIGHT MODE */
 .related {
   margin-top: 40px;
   padding: 15px;
   border-radius: 10px;
   background: #f1f5f9;
+  color: #0f172a;
 }
+
+/* 🔵 LINK COLOR CHANGED TO BLUE (instead of orange) */
+.related a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.related a:hover {
+  text-decoration: underline;
+  color: #2563eb;
+}
+
+/* DARK MODE FIX FOR RELATED BOX */
+.dark-mode .related {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+.dark-mode .related a {
+  color: #60a5fa;  /* lighter blue for dark background */
+}
+
 /* BUTTON */
 .continue-btn{
 text-align:right;
@@ -107,6 +132,16 @@ text-align:center;
 margin-top:15px;
 }
 
+.share button {
+  background: #3b82f6;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  font-family: inherit;
+  cursor: pointer;
+}
+
 /* COMMENT TEXT */
 .comment-text{
 margin-top:20px;
@@ -119,20 +154,7 @@ color:#64748b;
 color:#94a3b8;
 }
 
-/* POPUP */
-#popup{
-display:none;
-position:fixed;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-background:white;
-color:black;
-padding:20px;
-border-radius:10px;
-}
-
-/* ----- STYLED DARK MODE BUTTON (added) ----- */
+/* DARK MODE BUTTON */
 .mode-btn {
   background: #334155;
   color: white;
@@ -171,7 +193,7 @@ border-radius:10px;
 আমি তখনও বুঝিনি—যে দৃশ্যটা দেখতে যাচ্ছি, সেটা স্বাভাবিক কিছু না...
 </p>
 
-<img src="AjanarPothe.jpg" loading="lazy">
+<img src="IMG_20260323_124840.jpg" loading="lazy">
 
 <div class="story">
 
@@ -262,19 +284,18 @@ border-radius:10px;
 <p>আমার মাথার ভেতর প্রশ্নের ঝড় উঠল।</p>
 
 <p>ওরা কারা?</p>
-
 <p>এই লোকটা কে?</p>
-
 <p>আর এই কাপড়ের ভেতরে কী আছে?</p>
-
 <p>আমি সিদ্ধান্ত নিলাম—ওদের অনুসরণ করব।</p>
 
 </div>
-<!-- RELATED -->
+
+<!-- RELATED BOX - NOW BLUE LINK -->
 <div class="related">
   <h3>📚 পরবর্তী অংশ</h3>
   <a href="part2.html">👉 Part 2 - পরবর্তী রহস্য</a>
 </div>
+
 <!-- CONTINUE -->
 <div class="continue-btn">
 <a href="part2.html">Continue ➡</a>
@@ -294,14 +315,14 @@ border-radius:10px;
 💬 নীচে আপনার মতামত জানান
 </p>
 
-<!-- 💬 CUSDIS COMMENT (FIXED) -->
+<!-- CUSDIS COMMENT -->
 <div id="cusdis_thread"
-data-host="https://cusdis.com"
-data-app-id="6bf38bc4-dcc7-46ff-b711-47dcda6d2f5a"
-data-page-id="part1"
-data-page-url="https://banglagolpogalaxy.github.io/part1.html"
-data-page-title="অদৃশ্য জগতের দ্বার - Part 1"
-data-theme="auto">
+  data-host="https://cusdis.com"
+  data-app-id="6bf38bc4-dcc7-46ff-b711-47dcda6d2f5a"
+  data-page-id="part1"
+  data-page-url="https://banglagolpogalaxy.github.io/part1.html"
+  data-page-title="অদৃশ্য জগতের দ্বার - Part 1"
+  data-theme="light">
 </div>
 
 <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
@@ -310,42 +331,40 @@ data-theme="auto">
 
 <script>
 
-/* 🔥 PROGRESS BAR */
-window.onscroll=()=>{
-let s=document.documentElement;
-document.getElementById("progress").style.width=
-(s.scrollTop/(s.scrollHeight-s.clientHeight))*100+"%";
+/* PROGRESS BAR */
+window.onscroll = () => {
+  let s = document.documentElement;
+  let progress = document.getElementById("progress");
+  if (progress) {
+    progress.style.width = (s.scrollTop / (s.scrollHeight - s.clientHeight)) * 100 + "%";
+  }
+};
+
+/* DARK MODE AUTO */
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  document.body.classList.add("dark-mode");
 }
 
-/* 🌙 DARK MODE AUTO */
-if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-document.body.classList.add("dark-mode");
+/* TOGGLE DARK MODE */
+function toggleDark() {
+  document.body.classList.toggle("dark-mode");
+  const cusdisDiv = document.getElementById("cusdis_thread");
+  if (window.CUSDIS) {
+    cusdisDiv.innerHTML = "";
+    window.CUSDIS.renderTo(cusdisDiv);
+  }
 }
 
-/* 🌙 TOGGLE */
-function toggleDark(){
-document.body.classList.toggle("dark-mode");
-
-/* 🔁 Cusdis reload */
-const cusdis=document.getElementById("cusdis_thread");
-cusdis.innerHTML="";
-if(window.CUSDIS){
-window.CUSDIS.renderTo(cusdis);
-}
-}
-
-/* 📲 SHARE */
-function shareNow(){
-
-const url=location.href;
-const title=document.title;
-
-if(navigator.share){
-navigator.share({title,url});
-}else{
-navigator.clipboard.writeText(url);
-alert("Link copied!");
-}
+/* SHARE FUNCTION */
+function shareNow() {
+  const url = location.href;
+  const title = document.title;
+  if (navigator.share) {
+    navigator.share({ title, url });
+  } else {
+    navigator.clipboard.writeText(url);
+    alert("লিংক কপি হয়েছে!");
+  }
 }
 
 </script>
