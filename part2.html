@@ -1,238 +1,309 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Part 1 - অজানার পথে</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      padding: 20px;
-      font-family: 'Noto Sans Bengali', sans-serif;
-      background-color: #ffffff;
-      color: #000000;
-      line-height: 1.6;
-    }
+<title>অদৃশ্য জগতের দ্বার - Part 2 | অদৃশ্য হওয়া</title>
 
-    .container {
-      max-width: 800px;
-      margin: auto;
-    }
+<meta name="description" content="অদৃশ্য জগতের দ্বার Part 2 - রহস্য আরও গভীর হচ্ছে">
+<meta property="og:title" content="অদৃশ্য জগতের দ্বার - Part 2">
+<meta property="og:description" content="একটা অদ্ভুত অদৃশ্য হওয়ার ঘটনা...">
+<meta property="og:image" content="part2.jpg">
 
-    h1 {
-      text-align: center;
-      font-size: 28px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
 
-    h2 {
-      text-align: center;
-      color: blue;
-      margin-bottom: 20px;
-    }
+<style>
 
-    .story-image {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .story-image img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .story-text {
-      font-size: 18px;
-      text-align: justify;
-    }
-    
-
-    .nav-buttons {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 40px;
-    }
-
-    .nav-buttons a {
-      text-decoration: none;
-      padding: 10px 15px;
-      background-color: #007BFF;
-      color: white;
-      border-radius: 6px;
-      font-size: 14px;
-    }
-
-    .nav-buttons a:hover {
-      background-color: #0056b3;
-    }
-
-    .home-btn {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .home-btn a {
-      text-decoration: none;
-      padding: 10px 20px;
-      background-color: #28a745;
-      color: white;
-      border-radius: 6px;
-    }
-
-    .home-btn a:hover {
-      background-color: #1e7e34;
-    }
-
-@media (max-width: 600px) {
-
-  body {
-    padding: 15px;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
-  .story-text {
-    font-size: 16px;
-  }
-
-  .nav-buttons a {
-    padding: 8px 10px;
-    font-size: 13px;
-  }
-
+body{
+margin:0;
+padding:20px;
+font-family:'Noto Sans Bengali', sans-serif;
+line-height:1.8;
+background:white;
+color:black;
+transition:0.3s;
 }
-  </style>
+
+.container{max-width:800px;margin:auto;}
+
+.dark-mode{
+background:#020617;
+color:white;
+}
+
+/* PROGRESS */
+#progress{
+position:fixed;
+top:0;
+left:0;
+height:4px;
+background:#ff7a00;
+width:0%;
+z-index:999;
+}
+
+h1{text-align:center;}
+h2{text-align:center;color:#ff7a00;}
+
+.hook{
+font-size:18px;
+font-weight:bold;
+color:#2563eb;
+}
+
+img{
+width:100%;
+border-radius:10px;
+margin:15px 0;
+}
+
+p{margin-bottom:14px;}
+
+/* NAV ROW */
+.nav-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:40px;
+}
+
+.nav-row a{
+padding:8px 14px;
+font-size:14px;
+border-radius:6px;
+text-decoration:none;
+color:white;
+}
+
+/* ✅ BLUE PREVIOUS */
+.prev-btn{
+background:#2563eb;
+}
+
+/* CONTINUE */
+.next-btn{
+background:#ff7a00;
+}
+
+/* HOME */
+.home{text-align:center;margin-top:20px;}
+.home a{
+background:#22c55e;
+padding:10px 20px;
+color:white;
+border-radius:8px;
+text-decoration:none;
+}
+
+/* SHARE */
+.share{text-align:center;margin-top:15px;}
+
+.comment-text{
+margin-top:20px;
+font-size:14px;
+text-align:center;
+color:#64748b;
+}
+
+.dark-mode .comment-text{
+color:#94a3b8;
+}
+
+/* RELATED */
+.related{
+margin-top:40px;
+padding:15px;
+border-radius:10px;
+background:#f1f5f9;
+}
+.dark-mode .related{
+background:#0f172a;
+}
+
+.related a{
+display:block;
+margin-top:8px;
+text-decoration:none;
+color:#2563eb;
+}
+
+/* ----- STYLED DARK MODE BUTTON (added) ----- */
+.mode-btn {
+  background: #334155;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.dark-mode .mode-btn {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+</style>
+
 </head>
 
 <body>
 
-  <div class="container">
+<div id="progress"></div>
 
-    <!-- 🔥 Title -->
-    <h1>অদৃশ্য জগতের দ্বার</h1>
+<div style="text-align:right;">
+  <button class="mode-btn" onclick="toggleDark()">🌙 Mode</button>
+</div>
 
-    <!-- 🔥 Subtitle -->
-    <h2>Part 2 - অদৃশ্য হওয়া</h2>
+<div class="container">
 
-    <!-- 🖼 Image -->
-    <div class="story-image">
-      <img src="IMG_20260324_123315.jpg" alt="Story Image">
-    </div>
+<h1>অদৃশ্য জগতের দ্বার</h1>
+<h2>Part 2 - অদৃশ্য হওয়া</h2>
 
-    <!-- 📖 Story -->
-    <div class="story-text">
-   
-   আমি ঘোড়াটাকে ধীরে ধীরে ওদের পেছনে নিয়ে চললাম। যেন তারা কিছু বুঝতে না পারে।<br>
-     <!--Tab to edit-->
-   </br>
-রাস্তা ক্রমশ সরু হয়ে আসছিল। দুপাশে গাছের সংখ্যা কমে যাচ্ছিল। বাতাসে একটা অদ্ভুত গন্ধ—পুরনো, স্যাঁতসেঁতে, আর একটু পচা কিছু একটা।<br>
-  <!--Tab to edit-->
-</br>
+<p class="hook">
+তারা আমার চোখের সামনে মিলিয়ে গেল… কিন্তু কোনো চিহ্ন রইল না।
+এটা কোনো সাধারণ ঘটনা নয়—
+আমি বুঝতে পারছিলাম, আমি এমন কিছুর সামনে দাঁড়িয়ে আছি যা ব্যাখ্যার বাইরে।
+</p>
 
-কিছুদূর এগিয়ে একটা জায়গায় এসে তারা থামল।<br>
-  <!--Tab to edit-->
-</br>
+<img src="part2.jpg" loading="lazy">
 
-সেখানে একটা ছোট নদী এসে মিশেছে বড় নদীর সঙ্গে।
-জলের শব্দটা অদ্ভুতভাবে প্রতিধ্বনিত হচ্ছিল।<br>
-  <!--Tab to edit-->
-</br>
+<div class="story">
 
-লোকটা গাড়ি থামিয়ে নামল।<br>
-  <!--Tab to edit-->
-</br>
+<p>তারা হাওয়ায় মিলিয়ে গেল—আমি নিজের চোখে দেখেছি।</p>
+<p>কিন্তু কোনো চিহ্ন নেই… যেন কখনো কেউ এখানে ছিলই না।</p>
+<p>তখনই বুঝলাম—আমি এমন কিছুর সামনে দাঁড়িয়ে আছি, যার ব্যাখ্যা এখনো আমার জানা নেই।</p>
 
-আমি দূরে একটা ঝোপের আড়ালে লুকিয়ে রইলাম।<br>
-  <!--Tab to edit-->
-</br>
+<p>আমি ঘোড়াটাকে ধীরে ধীরে ওদের পেছনে নিয়ে চললাম। যেন তারা কিছু বুঝতে না পারে।</p>
 
-হঠাৎ—<br>
-  <!--Tab to edit-->
-</br>
+<p>রাস্তা ক্রমশ সরু হয়ে আসছিল। দুপাশে গাছের সংখ্যা কমে যাচ্ছিল।</p>
 
-কিছু একটা ঘটল।<br>
-  <!--Tab to edit-->
-</br>
+<p>বাতাসে একটা অদ্ভুত গন্ধ—পুরনো, স্যাঁতসেঁতে, আর একটু পচা কিছু একটা।</p>
 
-আমি ঠিক বুঝতে পারলাম না কীভাবে, কিন্তু মুহূর্তের মধ্যে তারা… অদৃশ্য হয়ে গেল।<br>
-  <!--Tab to edit-->
-</br>
+<p>কিছুদূর এগিয়ে একটা জায়গায় এসে তারা থামল।</p>
 
-হাওয়ায় মিলিয়ে গেল যেন।<br>
-  <!--Tab to edit-->
-</br>
+<p>সেখানে একটা ছোট নদী এসে মিশেছে বড় নদীর সঙ্গে।</p>
 
-আমি দৌড়ে গেলাম সেই জায়গায়।<br>
-  <!--Tab to edit-->
-</br>
+<p>জলের শব্দটা অদ্ভুতভাবে প্রতিধ্বনিত হচ্ছিল।</p>
 
-চারপাশে তাকালাম।<br>
-  <!--Tab to edit-->
-</br>
-কিছুই নেই।<br>
-  <!--Tab to edit-->
-</br>
+<p>লোকটা গাড়ি থামিয়ে নামল।</p>
 
-না কোনো গাড়ি, না কোনো পদচিহ্ন, না কোনো গর্ত।<br>
-  <!--Tab to edit-->
-</br>
+<p>আমি দূরে একটা ঝোপের আড়ালে লুকিয়ে রইলাম।</p>
 
-শুধু ফাঁকা মাটি।<br>
-  <!--Tab to edit-->
-</br>
+<p>হঠাৎ—</p>
 
-আমি হাঁটু গেড়ে বসে মাটি স্পর্শ করলাম।<br>
-  <!--Tab to edit-->
-</br>
+<p>কিছু একটা ঘটল।</p>
 
-ঠান্ডা।
-স্বাভাবিক।<br>
-  <!--Tab to edit-->
-</br>
+<p>আমি ঠিক বুঝতে পারলাম না কীভাবে, কিন্তু মুহূর্তের মধ্যে তারা… অদৃশ্য হয়ে গেল।</p>
 
-কিন্তু আমার মনে হচ্ছিল—এই মাটির নিচেই লুকিয়ে আছে কোনো বিশাল গোপন রহস্য।<br>
-  <!--Tab to edit-->
-</br>
+<p>হাওয়ায় মিলিয়ে গেল যেন।</p>
 
-আমি ধীরে ধীরে উঠে দাঁড়ালাম।<br>
-  <!--Tab to edit-->
-</br>
+<p>আমি দৌড়ে গেলাম সেই জায়গায়।</p>
 
-আমার ভেতরের পুরনো মানুষটা আবার জেগে উঠেছে।<br>
-  <!--Tab to edit-->
-</br>
-ইন্টেলিজেন্স অফিসার—যে কোনো রহস্য ছাড়ে না।<br>
-  <!--Tab to edit-->
-</br>
+<p>চারপাশে তাকালাম।</p>
 
-আমি জানতাম—এটা এখানেই শেষ নয়।<br>
-  <!--Tab to edit-->
-</br>
-এটা শুধু শুরু।
+<p>কিছুই নেই।</p>
 
+<p>না কোনো গাড়ি, না কোনো পদচিহ্ন, না কোনো গর্ত।</p>
 
-    </div>
+<p>শুধু ফাঁকা মাটি।</p>
 
-    <!-- 🔘 Navigation -->
-    <div class="nav-buttons">
-      <a href="part1.html">⬅ Previous</a>
-      <a href="part3.html">Next ➡</a>
-    </div>
+<p>আমি হাঁটু গেড়ে বসে মাটি স্পর্শ করলাম।</p>
 
-    <!-- 🏠 Home Button -->
-    <div class="home-btn">
-      <a href="index.html">🏠 Home</a>
-    </div>
+<p>ঠান্ডা।</p>
 
-  </div>
+<p>স্বাভাবিক।</p>
+
+<p>কিন্তু আমার মনে হচ্ছিল—এই মাটির নিচেই লুকিয়ে আছে কোনো বিশাল গোপন রহস্য।</p>
+
+<p>আমি ধীরে ধীরে উঠে দাঁড়ালাম।</p>
+
+<p>আমার ভেতরের পুরনো মানুষটা আবার জেগে উঠেছে।</p>
+
+<p>ইন্টেলিজেন্স অফিসার—যে কোনো রহস্য ছাড়ে না।</p>
+
+<p>আমি জানতাম—এটা এখানেই শেষ নয়।</p>
+
+<p>এটা শুধু শুরু।</p>
+
+</div>
+
+<!-- RELATED -->
+<div class="related">
+<h3>📚 পরবর্তী অংশ</h3>
+<a href="part3.html">👉 Part 3 - পরবর্তী রহস্য</a>
+</div>
+
+<!-- NAV -->
+<div class="nav-row">
+<a href="part1.html" class="prev-btn">⬅ Previous</a>
+<a href="part3.html" class="next-btn">Continue ➡</a>
+</div>
+
+<!-- HOME -->
+<div class="home">
+<a href="index.html">🏠 Home</a>
+</div>
+
+<!-- SHARE -->
+<div class="share">
+<button onclick="shareNow()">📲 Share</button>
+</div>
+
+<p class="comment-text">💬 আপনার মতামত জানান</p>
+
+<!-- CUSDIS -->
+<div id="cusdis_thread"
+data-host="https://cusdis.com"
+data-app-id="6bf38bc4-dcc7-46ff-b711-47dcda6d2f5a"
+data-page-id="part2"
+data-page-url="https://banglagolpogalaxy.github.io/part2.html"
+data-page-title="অদৃশ্য জগতের দ্বার - Part 2"
+data-theme="auto">
+</div>
+
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+</div>
+
+<script>
+
+window.onscroll=()=>{
+let s=document.documentElement;
+document.getElementById("progress").style.width=
+(s.scrollTop/(s.scrollHeight-s.clientHeight))*100+"%";
+}
+
+if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+document.body.classList.add("dark-mode");
+}
+
+function toggleDark(){
+document.body.classList.toggle("dark-mode");
+
+const cusdis=document.getElementById("cusdis_thread");
+cusdis.innerHTML="";
+if(window.CUSDIS){
+window.CUSDIS.renderTo(cusdis);
+}
+}
+
+function shareNow(){
+const url=location.href;
+
+if(navigator.share){
+navigator.share({url});
+}else{
+navigator.clipboard.writeText(url);
+alert("Link copied!");
+}
+}
+
+</script>
 
 </body>
 </html>
