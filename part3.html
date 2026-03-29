@@ -1,202 +1,306 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Part 1 - অজানার পথে</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      padding: 20px;
-      font-family: 'Noto Sans Bengali', sans-serif;
-      background-color: #ffffff;
-      color: #000000;
-      line-height: 1.6;
-    }
+<title>Part 3 - প্রত্যাবর্তন | অদৃশ্য জগতের দ্বার</title>
 
-    .container {
-      max-width: 800px;
-      margin: auto;
-    }
+<meta name="description" content="অদৃশ্য হওয়ার রহস্য আরও গভীর হচ্ছে... এটা কি কোনো গোপন দ্বার?">
+<meta name="keywords" content="ভৌতিক গল্প বাংলা, রহস্য গল্প, গোপন দরজা">
+<meta name="robots" content="index, follow">
 
-    h1 {
-      text-align: center;
-      font-size: 28px;
-    }
+<meta property="og:title" content="অদৃশ্য জগতের দ্বার - Part 3">
+<meta property="og:description" content="রহস্যের আরও গভীরে প্রবেশ...">
+<meta property="og:image" content="part3.jpg">
 
-    h2 {
-      text-align: center;
-      color: blue;
-      margin-bottom: 20px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
 
-    .story-image {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+<style>
 
-    .story-image img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .story-text {
-      font-size: 18px;
-      text-align: justify;
-    }
-    
-
-    .nav-buttons {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 40px;
-    }
-
-    .nav-buttons a {
-      text-decoration: none;
-      padding: 10px 15px;
-      background-color: #007BFF;
-      color: white;
-      border-radius: 6px;
-      font-size: 14px;
-    }
-
-    .nav-buttons a:hover {
-      background-color: #0056b3;
-    }
-
-    .home-btn {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .home-btn a {
-      text-decoration: none;
-      padding: 10px 20px;
-      background-color: #28a745;
-      color: white;
-      border-radius: 6px;
-    }
-
-    .home-btn a:hover {
-      background-color: #1e7e34;
-    }
-
-@media (max-width: 600px) {
-
-  body {
-    padding: 15px;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
-  .story-text {
-    font-size: 16px;
-  }
-
-  .nav-buttons a {
-    padding: 8px 10px;
-    font-size: 13px;
-  }
-
+body{
+margin:0;
+padding:20px;
+font-family:'Noto Sans Bengali', sans-serif;
+line-height:1.8;
+background:white;
+color:black;
+transition:0.3s;
 }
-  </style>
+
+.container{max-width:800px;margin:auto;}
+
+.dark-mode{
+background:#020617;
+color:white;
+}
+
+/* PROGRESS */
+#progress{
+position:fixed;
+top:0;
+left:0;
+height:4px;
+background:#ff7a00;
+width:0%;
+z-index:999;
+}
+
+h1{text-align:center;}
+h2{text-align:center;color:#ff7a00;}
+
+.hook{
+font-size:18px;
+font-weight:bold;
+color:#2563eb;
+}
+
+img{
+width:100%;
+border-radius:10px;
+margin:15px 0;
+}
+
+p{margin-bottom:14px;}
+
+/* NAV ROW */
+.nav-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:40px;
+}
+
+.nav-row a{
+padding:8px 14px;
+font-size:14px;
+border-radius:6px;
+text-decoration:none;
+color:white;
+}
+
+/* BLUE PREVIOUS */
+.prev-btn{
+background:#2563eb;
+}
+
+/* ORANGE NEXT */
+.next-btn{
+background:#ff7a00;
+}
+
+/* HOME */
+.home{text-align:center;margin-top:20px;}
+.home a{
+background:#22c55e;
+padding:10px 20px;
+color:white;
+border-radius:8px;
+text-decoration:none;
+}
+
+/* SHARE */
+.share{text-align:center;margin-top:15px;}
+
+.comment-text{
+margin-top:20px;
+font-size:14px;
+text-align:center;
+color:#64748b;
+}
+
+.dark-mode .comment-text{
+color:#94a3b8;
+}
+
+/* RELATED */
+.related{
+margin-top:40px;
+padding:15px;
+border-radius:10px;
+background:#f1f5f9;
+}
+.dark-mode .related{
+background:#0f172a;
+}
+
+.related a{
+display:block;
+margin-top:8px;
+text-decoration:none;
+color:#2563eb;
+}
+
+/* STYLED DARK MODE BUTTON */
+.mode-btn {
+  background: #334155;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.dark-mode .mode-btn {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+</style>
+
 </head>
 
 <body>
 
-  <div class="container">
+<div id="progress"></div>
 
-    <!-- 🔥 Title -->
-    <h1>অদৃশ্য জগতের দ্বার</h1>
+<div style="text-align:right;">
+  <button class="mode-btn" onclick="toggleDark()">🌙 Mode</button>
+</div>
 
-    <!-- 🔥 Subtitle -->
-    <h2>Part 3 - প্রত্যাবর্তন</h2>
+<div class="container">
 
-    <!-- 🖼 Image -->
-    <div class="story-image">
-      <img src="IMG_20260324_125115.jpg" alt="Story Image">
-    </div>
+<h1>অদৃশ্য জগতের দ্বার</h1>
+<h2>Part 3 - প্রত্যাবর্তন</h2>
 
-    <!-- 📖 Story -->
-    <div class="story-text">
-   
-   সন্ধ্যার আলো তখন ধীরে ধীরে মিলিয়ে যাচ্ছিল। আকাশের নীলচে-ধূসর রঙ যেন দিনের শেষ নিঃশ্বাস ফেলছে। আমি দাঁড়িয়ে ছিলাম সেই অদ্ভুত ফাঁকা জায়গাটার সামনে—যেখানে কয়েক মুহূর্ত আগেই মানুষগুলো আমার চোখের সামনে মিলিয়ে গেল।<br>
-     <!--Tab to edit-->
-   </br>
-আমার শরীরের ভেতর দিয়ে এক অজানা শীতলতা বয়ে গেল। এটা কি সত্যি? নাকি আমি কোনো বিভ্রম দেখছি? কিছুক্ষণ স্থির দাঁড়িয়ে রইলাম। চারপাশে এমন এক নিস্তব্ধতা, যেন এই জায়গাটা নিজেই কোনো গভীর রহস্য লুকিয়ে রেখেছে, আর কাউকে তা জানতে দিতে চায় না।<br>
-  <!--Tab to edit-->
-</br>
-আমি ধীরে ধীরে হাঁটু গেড়ে বসে মাটিতে হাত রাখলাম। ঠান্ডা, শক্ত… একদম সাধারণ মাটির মতোই। কিন্তু আমি জানতাম—এটা সাধারণ নয়। কিছু একটা আছে এখানে, যা চোখে দেখা যায় না, কিন্তু অনুভব করা যায়। দূরে নদীর মৃদু শব্দ ভেসে আসছিল, হালকা বাতাস বইছিল, অথচ আশেপাশের গাছের পাতাগুলো অস্বাভাবিকভাবে স্থির। যেন সময় নিজেই এখানে থমকে গেছে।<br>
-  <!--Tab to edit-->
-</br>
-আমার মনে হল—এখানে বেশি সময় থাকা ঠিক হবে না। এক অজানা ভয় আমাকে গ্রাস করছিল। যেন আমি যদি আর একটু দেরি করি, আমিও হয়তো এই মাটির নিচে মিলিয়ে যাব। আর দেরি না করে আমি সেখান থেকে ফিরে আসার সিদ্ধান্ত নিলাম।<br>
-  <!--Tab to edit-->
-</br>
-রাত নামার আগেই আমি আমাদের অস্থায়ী ঘাঁটিতে পৌঁছে গেলাম। একটা পুরনো, আধা-ভাঙা ঘর—যেখানে আমরা মাঝে মাঝে আশ্রয় নিতাম। ঘরে ঢুকতেই সবাই আমার দিকে তাকাল। তাদের চোখে কৌতূহল, কিন্তু আমার মুখে যে আতঙ্কের ছাপ, তা দেখে তারা বুঝে গেল কিছু একটা অস্বাভাবিক ঘটেছে।<br>
-  <!--Tab to edit-->
-</br>
-“কি দেখলে?”<br>
-  <!--Tab to edit-->
-</br>
-—একজন ধীরস্বরে জিজ্ঞেস করল।<br>
-  <!--Tab to edit-->
-</br>
-আমি কিছুক্ষণ চুপ করে রইলাম। যেন শব্দগুলো গুছিয়ে নিতে পারছিলাম না। তারপর ধীরে ধীরে সব বলতে শুরু করলাম—ঘোড়ার গাড়ি, সেই অদ্ভুত মানুষগুলো, বাচ্চাদের মাথায় জোর করে কিছু বাঁধা… আর তারপর, হঠাৎ করেই তাদের মাটির নিচে মিলিয়ে যাওয়া।<br>
-  <!--Tab to edit-->
-</br>
-আমার কথা শেষ হতেই ঘরের ভেতর এক অদ্ভুত নিস্তব্ধতা নেমে এলো। লণ্ঠনের হলুদ আলোয় সবার মুখে ছায়া পড়েছে। কেউ কিছু বলছে না, কিন্তু সবার চোখে একই প্রশ্ন—এটা কি সত্যিই সম্ভব?<br>
-  <!--Tab to edit-->
-</br>
-টেবিলের উপর ছড়ানো পুরনো মানচিত্রটার দিকে আমি এগিয়ে গেলাম। হাত বাড়িয়ে সেই জায়গাটা চিহ্নিত করলাম। “এইখানে…”—আমি আস্তে করে বললাম।<br>
-  <!--Tab to edit-->
-</br>
-একজন সন্দেহের সুরে বলল, “তুমি কি নিশ্চিত এটা কোনো প্রাকৃতিক ব্যাপার নয়?”<br>
-  <!--Tab to edit-->
-</br>
-আমি ধীরে মাথা নাড়লাম।<br>
-আরেকজন বলল, “হয়তো কোনো গোপন পথ… underground কিছু?”<br>
-  <!--Tab to edit-->
-</br>
-আমি কিছুক্ষণ চুপ করে থেকে বললাম, “হয়তো পথ… কিন্তু আমার মনে হয় এটা শুধু পথ না। এটা যেন একটা দ্বার… অন্য কোথাও যাওয়ার।”<br>
-  <!--Tab to edit-->
-</br>
-আমার কথায় আবারও নিস্তব্ধতা নেমে এলো। যেন সবাই বুঝতে পারছিল—আমরা যে কিছুর মুখোমুখি হতে যাচ্ছি, তা আমাদের কল্পনার বাইরেও ভয়ংকর হতে পারে।<br>
-  <!--Tab to edit-->
-</br>
-অবশেষে আমরা সিদ্ধান্ত নিলাম—পরদিন সকালে আবার সেখানে যাব। তবে এবার একা নয়, পুরো টিম নিয়ে, সম্পূর্ণ প্রস্তুতি নিয়ে। কারণ আমরা জানতাম, এটা শুধু একটা রহস্য নয়—এটা এমন কিছু, যা আমাদের জীবনটাই বদলে দিতে পারে।<br>
-  <!--Tab to edit-->
-</br>
-সেদিন রাতে আমার আর ঘুম আসেনি। চোখ বন্ধ করলেই সেই দৃশ্যটা ভেসে উঠছিল—মানুষগুলো ধীরে ধীরে মাটির নিচে মিলিয়ে যাচ্ছে, আর আমি দূর থেকে দাঁড়িয়ে সব দেখছি।<br>
-  <!--Tab to edit-->
-</br>
-মনে হচ্ছিল, আমি কোনো অজানা জগতের দরজার সামনে দাঁড়িয়ে আছি।
- আর সেই দরজা… ধীরে ধীরে আমার দিকেই খুলে যাচ্ছে।
+<p class="hook">
+যে জায়গায় তারা মিলিয়ে গেল—সেটা শুধু মাটি নয়… সেটা একটা গোপন দ্বার।<br>
+আর আজ আমরা ফিরে এসেছি… সেই দরজা খোলার জন্য।
+</p>
 
+<img src="part3.jpg" loading="lazy">
 
-    </div>
+<div class="story">
 
-    <!-- 🔘 Navigation -->
-    <div class="nav-buttons">
-      <a href="part2.html">⬅ Previous</a>
-      <a href="part4.html">Next ➡</a>
-    </div>
+<p>মানুষগুলো মাটির নিচে মিলিয়ে গেছে—কিন্তু সেটা কোনো কৌশল ছিল না।</p>
+<p>আমার চোখ ভুল করেনি… বরং আমি এমন কিছু দেখেছি, যা দেখা উচিত ছিল না।</p>
+<p>আর এখন মনে হচ্ছে—ওটা শুধু তাদের অদৃশ্য হওয়া নয়… ওটা ছিল কোনো কিছুর দরজা।</p>
+<p>সন্ধ্যার আলো তখন ধীরে ধীরে মিলিয়ে যাচ্ছিল।</p>
+<p>আকাশের নীলচে-ধূসর রঙ যেন দিনের শেষ নিঃশ্বাস ফেলছে।</p>
+<p>আমি দাঁড়িয়ে ছিলাম সেই অদ্ভুত ফাঁকা জায়গাটার সামনে—যেখানে কয়েক মুহূর্ত আগেই মানুষগুলো আমার চোখের সামনে মিলিয়ে গেল।</p>
+<p>আমার শরীরের ভেতর দিয়ে এক অজানা শীতলতা বয়ে গেল।</p>
+<p>এটা কি সত্যি? নাকি আমি কোনো বিভ্রম দেখছি?</p>
+<p>কিছুক্ষণ স্থির দাঁড়িয়ে রইলাম।</p>
+<p>চারপাশে এমন এক নিস্তব্ধতা, যেন এই জায়গাটা নিজেই কোনো গভীর রহস্য লুকিয়ে রেখেছে, আর কাউকে তা জানতে দিতে চায় না।</p>
+<p>আমি ধীরে ধীরে হাঁটু গেড়ে বসে মাটিতে হাত রাখলাম।</p>
+<p>ঠান্ডা, শক্ত… একদম সাধারণ মাটির মতোই।</p>
+<p>কিন্তু আমি জানতাম—এটা সাধারণ নয়।</p>
+<p>কিছু একটা আছে এখানে, যা চোখে দেখা যায় না, কিন্তু অনুভব করা যায়।</p>
+<p>দূরে নদীর মৃদু শব্দ ভেসে আসছিল, হালকা বাতাস বইছিল, অথচ আশেপাশের গাছের পাতাগুলো অস্বাভাবিকভাবে স্থির।</p>
+<p>যেন সময় নিজেই এখানে থমকে গেছে।</p>
+<p>আমার মনে হল—এখানে বেশি সময় থাকা ঠিক হবে না।</p>
+<p>এক অজানা ভয় আমাকে গ্রাস করছিল।</p>
+<p>যেন আমি যদি আর একটু দেরি করি, আমিও হয়তো এই মাটির নিচে মিলিয়ে যাব।</p>
+<p>আর দেরি না করে আমি সেখান থেকে ফিরে আসার সিদ্ধান্ত নিলাম।</p>
+<p>রাত নামার আগেই আমি আমাদের অস্থায়ী ঘাঁটিতে পৌঁছে গেলাম।</p>
+<p>একটা পুরনো, আধা-ভাঙা ঘর—যেখানে আমরা মাঝে মাঝে আশ্রয় নিতাম।</p>
+<p>ঘরে ঢুকতেই সবাই আমার দিকে তাকাল।</p>
+<p>তাদের চোখে কৌতূহল, কিন্তু আমার মুখে যে আতঙ্কের ছাপ, তা দেখে তারা বুঝে গেল কিছু একটা অস্বাভাবিক ঘটেছে।</p>
+<p>“কি দেখলে?”—একজন ধীরস্বরে জিজ্ঞেস করল।</p>
+<p>আমি কিছুক্ষণ চুপ করে রইলাম।</p>
+<p>যেন শব্দগুলো গুছিয়ে নিতে পারছিলাম না।</p>
+<p>তারপর ধীরে ধীরে সব বলতে শুরু করলাম—</p>
+<p>ঘোড়ার গাড়ি, সেই অদ্ভুত মানুষগুলো, বাচ্চাদের মাথায় জোর করে কিছু বাঁধা…</p>
+<p>আর তারপর, হঠাৎ করেই তাদের মাটির নিচে মিলিয়ে যাওয়া।</p>
+<p>আমার কথা শেষ হতেই ঘরের ভেতর এক অদ্ভুত নিস্তব্ধতা নেমে এলো।</p>
+<p>লণ্ঠনের হলুদ আলোয় সবার মুখে ছায়া পড়েছে।</p>
+<p>কেউ কিছু বলছে না, কিন্তু সবার চোখে একই প্রশ্ন—এটা কি সত্যিই সম্ভব?</p>
+<p>টেবিলের উপর ছড়ানো পুরনো মানচিত্রটার দিকে আমি এগিয়ে গেলাম।</p>
+<p>হাত বাড়িয়ে সেই জায়গাটা চিহ্নিত করলাম।</p>
+<p>“এইখানে…”—আমি আস্তে করে বললাম।</p>
+<p>একজন সন্দেহের সুরে বলল, “তুমি কি নিশ্চিত এটা কোনো প্রাকৃতিক ব্যাপার নয়?”</p>
+<p>আমি ধীরে মাথা নাড়লাম।</p>
+<p>“না… এটা কিছু অন্যরকম। এখানে কিছু লুকানো আছে… এমন কিছু, যা আমরা এখনো বুঝতে পারিনি।”</p>
+<p>আরেকজন বলল, “হয়তো কোনো গোপন পথ… underground কিছু?”</p>
+<p>আমি কিছুক্ষণ চুপ করে থেকে বললাম,</p>
+<p>“হয়তো পথ… কিন্তু আমার মনে হয় এটা শুধু পথ না। এটা যেন একটা দ্বার… অন্য কোথাও যাওয়ার।”</p>
+<p>আমার কথায় আবারও নিস্তব্ধতা নেমে এলো।</p>
+<p>যেন সবাই বুঝতে পারছিল—আমরা যে কিছুর মুখোমুখি হতে যাচ্ছি, তা আমাদের কল্পনার বাইরেও ভয়ংকর হতে পারে।</p>
+<p>অবশেষে আমরা সিদ্ধান্ত নিলাম—পরদিন সকালে আবার সেখানে যাব।</p>
+<p>তবে এবার একা নয়, পুরো টিম নিয়ে, সম্পূর্ণ প্রস্তুতি নিয়ে।</p>
+<p>কারণ আমরা জানতাম, এটা শুধু একটা রহস্য নয়—এটা এমন কিছু, যা আমাদের জীবনটাই বদলে দিতে পারে।</p>
+<p>সেদিন রাতে আমার আর ঘুম আসেনি।</p>
+<p>চোখ বন্ধ করলেই সেই দৃশ্যটা ভেসে উঠছিল—মানুষগুলো ধীরে ধীরে মাটির নিচে মিলিয়ে যাচ্ছে, আর আমি দূর থেকে দাঁড়িয়ে সব দেখছি।</p>
+<p>মনে হচ্ছিল, আমি কোনো অজানা জগতের দরজার সামনে দাঁড়িয়ে আছি।</p>
+<p>আর সেই দরজা… ধীরে ধীরে আমার দিকেই খুলে যাচ্ছে।</p>
 
-    <!-- 🏠 Home Button -->
-    <div class="home-btn">
-      <a href="index.html">🏠 Home</a>
-    </div>
+</div>
 
-  </div>
+<!-- RELATED (only next part, matching Part 2) -->
+<div class="related">
+<h3>📚 পরবর্তী অংশ</h3>
+<a href="part4.html">👉 Part 4 - পরবর্তী রহস্য</a>
+</div>
+
+<!-- NAVIGATION ROW (English text, same as Part 2) -->
+<div class="nav-row">
+<a href="part2.html" class="prev-btn">⬅ Previous</a>
+<a href="part4.html" class="next-btn">Continue ➡</a>
+</div>
+
+<!-- HOME (English text) -->
+<div class="home">
+<a href="index.html">🏠 Home</a>
+</div>
+
+<!-- SHARE (English text, same function as Part 2) -->
+<div class="share">
+<button onclick="shareNow()">📲 Share</button>
+</div>
+
+<p class="comment-text">
+💬 আপনার মতামত জানান
+</p>
+
+<div id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="6bf38bc4-dcc7-46ff-b711-47dcda6d2f5a"
+  data-page-id="part3"
+  data-page-url="https://banglagolpogalaxy.github.io/part3.html"
+  data-page-title="অদৃশ্য জগতের দ্বার - Part 3"
+  data-theme="auto">
+</div>
+
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+<script>
+
+window.onscroll=()=>{
+let s=document.documentElement;
+document.getElementById("progress").style.width=
+(s.scrollTop/(s.scrollHeight-s.clientHeight))*100+"%";
+}
+
+if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+document.body.classList.add("dark-mode");
+}
+
+function toggleDark(){
+document.body.classList.toggle("dark-mode");
+
+const cusdis=document.getElementById("cusdis_thread");
+cusdis.innerHTML="";
+if(window.CUSDIS){
+window.CUSDIS.renderTo(cusdis);
+}
+}
+
+function shareNow(){
+const url=location.href;
+
+if(navigator.share){
+navigator.share({url});
+}else{
+navigator.clipboard.writeText(url);
+alert("Link copied!");
+}
+}
+
+</script>
 
 </body>
-</html>
+  </html>
