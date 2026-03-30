@@ -242,35 +242,23 @@ style="background:#38bdf8;padding:10px;border-radius:6px;color:black;">
 // 📚 গল্পের ডাটাবেস – এখানে সব গল্পের তথ্য থাকবে
 // ==================================================
 const stories = [
-  // ⭐ নতুন গল্প যোগ করতে হলে এখানে নতুন অবজেক্ট যোগ করুন।
-  //    সবচেয়ে নতুন গল্প অ্যারের **শুরুতে** রাখুন, তাহলে Latest সেকশনে প্রথমে দেখাবে।
+  // ⭐ নতুন গল্প – সবার উপরে রাখলে Latest সেকশনে প্রথমে দেখাবে
   {
-    title:"অচিনপুরের রেলগাড়ি",
-    image:"AchinpurerRailgari.jpg",
-    link:"achinpurerrailgari.html",
-    category:"sci",
-    featured:true,
-    tags:["sci","mystery"]
-  }
-
+    title: "অচিনপুরের রেলগাড়ি",
+    image: "AchinpurerRailgari.jpg",          // ফাইলের নাম ছোট হাতের, স্পেস ছাড়া
+    link: "achinpurerrailgari.html",          // গল্পের ফাইলের নাম
+    category: "sci",                      // Sci-Fi ক্যাটাগরিতে রাখা হয়েছে
+    featured: true,                       // ফিচার্ড সেকশনেও দেখাবে
+    tags: ["mystery", "surreal", "literary"]
+  },
   {
-    title:"অদৃশ্য জগতের দ্বার",     // গল্পের নাম
-    image:"Card1.jpg",               // কার্ডের ছবির ফাইল নাম (পাথ)
-    link:"part1.html",               // গল্পের HTML ফাইলের লিংক
-    category:"sci",                 // কোন ক্যাটাগরিতে দেখাবে (sci / horror / romantic ...)
-    featured:true,                  // true = ফিচার্ড সেকশনে দেখাবে, false = দেখাবে না
-    tags:["sci","mystery"]          // সার্চের জন্য ট্যাগ (কমা দিয়ে পৃথক)
-  ];
+    title: "অদৃশ্য জগতের দ্বার",          // গল্পের নাম
+    image: "Card1.jpg",                   // কার্ডের ছবির ফাইল নাম
+    link: "part1.html",                   // গল্পের HTML ফাইলের লিংক
+    category: "sci",                      // ক্যাটাগরি
+    featured: true,                       // ফিচার্ড সেকশনে দেখাবে
+    tags: ["sci", "mystery"]              // সার্চ ট্যাগ
   }
-  // 👇 নতুন গল্প এখানে যোগ করুন (শুরুতে)
-  // {
-  //   title:"আরেকটি গল্প",
-  //   image:"another.jpg",
-  //   link:"another.html",
-  //   category:"sci",
-  //   featured:false,
-  //   tags:["sci","adventure"]
-  // }
 ];
 
 // ==================================================
