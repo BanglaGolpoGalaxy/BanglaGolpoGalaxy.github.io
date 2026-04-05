@@ -1,26 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- মূল পাতা -->
   <url>
-    <loc>https://BanglaJobPortalGalaxy.github.io/</loc>
-    <lastmod>2026-03-29</lastmod>
+    <loc>https://banglagolpogalaxy.github.io/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  
+  <!-- অদৃশ্য জগতের দ্বার সিরিজের সব পার্ট -->
   <url>
-    <loc>https://BanglaJobPortalGalaxy.github.io/part1.html</loc>
-    <lastmod>2026-03-28</lastmod>
+    <loc>https://banglagolpogalaxy.github.io/part1.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://BanglaJobPortalGalaxy.github.io/part2.html</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://banglagolpogalaxy.github.io/part2.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://BanglaJobPortalGalaxy.github.io/part3.html</loc>
-    <lastmod>2026-03-26</lastmod>
+    <loc>https://banglagolpogalaxy.github.io/part3.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://banglagolpogalaxy.github.io/part4.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://banglagolpogalaxy.github.io/part5.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- অচিনপুরের রেলগাড়ি -->
+  <url>
+    <loc>https://banglagolpogalaxy.github.io/achinpirerrailgari.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- নতুন গল্প: অনুত্তরিত নীল চিরকুট -->
+  <url>
+    <loc>https://banglagolpogalaxy.github.io/onuttorito_nil_chirokut.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
