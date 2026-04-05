@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>অনুত্তরিত নীল চিরকুট | একটি অনুভূতির গল্প | Bangla Golpo Galaxy</title>
+
+<!-- SEO মেটা ট্যাগ -->
+<meta name="description" content="একটি আন্তরিক চিঠি, যা বলা হয়নি কিন্তু লেখা হয়েছিল। আবেগ, ভালোলাগা আর অপ্রকাশিত কথার এক অনন্য গল্প – আর কোন উত্তর আসেনি।">
+<meta name="keywords" content="বাংলা গল্প, অনুত্তরিত নীল চিরকুটি, প্রেমের চিঠি, অনুভূতি, ভালোবাসা">
+<meta name="robots" content="index, follow">
+
+<!-- ওপেন গ্রাফ (সোশ্যাল মিডিয়া) -->
+<meta property="og:title" content="অনুত্তরিত নীল চিরকুট | একটি অনুভূতির গল্প">
+<meta property="og:description" content="বলব বলব করেও বলা হয় না যে মনের কথা — সমস্ত ভয় লজ্জা ভেঙে আজ বলেই ফেলি। কিন্তু উত্তর আসেনি।">
+<meta property="og:image" content="outtor_chithi_cover.jpg"> <!-- আপনার কভার ছবির পাথ দিন -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://banglagolpogalaxy.github.io/outtor_chithi.html">
+
+<!-- গুগল ফন্ট (বাংলা সাপোর্ট) -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
+
+<style>
+/* ========== গল্পের নিজস্ব স্টাইল (অপরিবর্তিত) ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #fdf8f0;
+    font-family: 'Segoe UI', 'Noto Sans Bengali', 'Times New Roman', serif;
+    line-height: 1.7;
+    color: #1e1e2a;
+    padding: 2rem 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+.container {
+    max-width: 780px;
+    margin: 0 auto;
+    background: #fffef7;
+    border-radius: 32px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05), 0 6px 12px rgba(0,0,0,0.1);
+    padding: 2rem 1.8rem;
+    position: relative;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.container::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 1px dashed #e2cfb3;
+    border-radius: 24px;
+    pointer-events: none;
+}
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #9b4b2c;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+.subhead {
+    text-align: center;
+    font-style: italic;
+    color: #b8735a;
+    border-bottom: 2px solid #f3e1c0;
+    padding-bottom: 1.2rem;
+    margin-bottom: 2rem;
+}
+.letter p {
+    margin-bottom: 1.4rem;
+    font-size: 1.05rem;
+    text-align: justify;
+}
+.quote {
+    font-style: normal;
+    background: #faf0e6;
+    padding: 0.6rem 1.2rem;
+    border-radius: 60px;
+    display: inline-block;
+    margin: 0.5rem 0;
+    color: #9b4b2c;
+    font-weight: 500;
+}
+.poetry {
+    font-style: italic;
+    background: #fff0e0;
+    padding: 0.8rem 1.5rem;
+    border-radius: 24px;
+    text-align: center;
+    margin: 1.2rem 0;
+    font-family: monospace;
+    font-size: 1rem;
+}
+hr {
+    margin: 2rem 0;
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e2cfb3, transparent);
+}
+.signature {
+    text-align: right;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: #7e5a48;
+    border-top: 1px solid #f3e1c0;
+    padding-top: 1.5rem;
+}
+@media (max-width: 550px) {
+    .container {
+        padding: 1.5rem;
+    }
+    .letter p {
+        font-size: 0.98rem;
+    }
+}
+
+/* ========== ডার্ক মোড (গল্পের নিজস্ব থিম অনুযায়ী) ========== */
+body.dark-mode {
+    background: #1a1a24;
+}
+body.dark-mode .container {
+    background: #2c2c38;
+    color: #ececf0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+body.dark-mode .subhead {
+    color: #e0b089;
+    border-bottom-color: #4a3e32;
+}
+body.dark-mode .quote,
+body.dark-mode .poetry {
+    background: #3b2e26;
+    color: #ffddbb;
+}
+body.dark-mode .container::before {
+    border-color: #6b5a4c;
+}
+body.dark-mode .signature {
+    color: #cfa68b;
+    border-top-color: #4a3e32;
+}
+
+/* ========== নেভিগেশন ও কমন এলিমেন্ট (অচিনপুরের রেলগাড়ি টেমপ্লেট থেকে নেওয়া) ========== */
+#progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: #ff7a00;
+    width: 0%;
+    z-index: 999;
+}
+.mode-btn {
+    background: #334155;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    transition: 0.2s;
+    margin-bottom: 10px;
+}
+.dark-mode .mode-btn {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+.nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.nav-row a {
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+}
+.prev-btn {
+    background: #2563eb;
+}
+.next-btn {
+    background: #ff7a00;
+}
+.home {
+    text-align: center;
+    margin-top: 20px;
+}
+.home a {
+    background: #22c55e;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.share {
+    text-align: center;
+    margin-top: 15px;
+}
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f0e4d4;
+    color: #4b2a1a;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 50px;
+    margin: 5px;
+    font-size: 0.85rem;
+    transition: 0.2s;
+    cursor: pointer;
+    border: none;
+}
+.share-btn:hover {
+    background: #e0ceb8;
+}
+.dark-mode .share-btn {
+    background: #4a3e32;
+    color: #f0e4d4;
+}
+.dark-mode .share-btn:hover {
+    background: #5e4e3e;
+}
+.comment-text {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #64748b;
+}
+.dark-mode .comment-text {
+    color: #94a3b8;
+}
+.related {
+    margin-top: 40px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f1f5f9;
+}
+.dark-mode .related {
+    background: #0f172a;
+}
+.related a {
+    display: block;
+    margin-top: 8px;
+    text-decoration: none;
+    color: #2563eb;
+}
+.copy-msg {
+    font-size: 0.8rem;
+    color: green;
+    margin-top: 5px;
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- প্রগ্রেস বার -->
+<div id="progress"></div>
+
+<!-- ডার্ক মোড টগল বাটন -->
+<div style="text-align:right; max-width:780px; margin:0 auto 10px auto;">
+    <button class="mode-btn" onclick="toggleDark()">🌙 Mode</button>
+</div>
+
+<div class="container">
+    <h1>🍂অনুত্তরিত নীল চিরকুট </h1>
+    <div class="subhead">একটি আন্তরিক অনুভূতির নিবেদন – যে চিঠির উত্তর আসেনি</div>
+
+    <div class="letter">
+        <p>বলব বলব করেও বলা হয় না যে মনের কথা —<br>
+        সমস্ত ভয় লজ্জা ভেঙে আজ বলেই ফেলি।</p>
+
+        <p>পটানো মানেই সুন্দর করে মিথ্যা কথা বলা, অহেতুক প্রশংসা করে ডোপামিন ক্ষরিত করা। আর তারপরেই ভাললাগা শুরু আর পটে যাওয়া। এসবই হরমোনের খেলা।</p>
+
+        <p>না, আমার মিথ্যে প্রশংসা করে পটানোর কোন স্কিল নেই। না আছে এভাবে পটানোর কোন অভিপ্রায়। তাই অহেতুক “আমি তোমাকে ভালোবাসি” এই কথা বলতে পারব না। তবে আমি তোমাকে খুব পছন্দ করি। তুমি অসম্ভব সুন্দর। অসম্ভব সুন্দর তোমার চাহনি। তোমার গর্জিয়াস লুক যেকোনো ছেলেকেই পাগল করে দেবে। আমিও extraordinary কেউ নই, সাধারণ একজন মানুষ। তাই তোমার প্রতি ক্রাশ খাওয়া অস্বাভাবিক কিছু নয়।</p>
+
+        <div class="poetry">
+            “তুমি সুন্দর তাই চেয়ে থাকি<br>
+            প্রিয়, সে কি মোর অপরাধ”<br>
+            — সতীনাথ মুখোপাধ্যায়
+        </div>
+
+        <p>তবে প্রথম প্রথম তোমার রূপের সৌন্দর্যের মায়ায় পড়লেও তোমার প্রতি আমার অ্যাটট্রাকশনের কারণ অন্য। সেটা হল তোমার মাসুমিয়াত। তোমার ওই ইনোসেন্ট, মাসুম, কিউট মুখটা দেখলেই যেন কেমন মায়ায় পড়ে যেতে হয়। তোমার মুখের ওই মিষ্টি, কোমল, শীতল ভাষা আমাকে যেন পাগল করে দেয়।</p>
+
+        <p>যেদিন প্রথম ইংলিশ পড়তে গেছি সেদিন থেকেই তোমাকে আমার ভালো লেগেছে। তারপর থেকে যতই তোমাকে দেখছি, ততই যেন তোমার প্রতি দুর্বল হয়ে পড়ছি। তোমার কথা ভাবতেই আমার হৃদয়ে শিহরণ খেলে যায়। তোমাকে নিয়ে ভাবা তাই আমার একটা রোজকার রুটিন হয়ে দাঁড়িয়েছে। তোমাকে কথাগুলো বলতে না পারলে আমি যেন কিছুতেই স্বস্তি পাচ্ছি না।</p>
+
+        <p>এ পর্যন্ত কোন মেয়ের চোখে চোখ রেখে কথা বলিনি, তাই তোমার চোখে চোখ রাখতেও আমার সাহস হয় না। কিন্তু আমি তোমার দিকে তাকাই — এটা হয়তো তুমি বুঝতে পারো। ভেবেছিলাম তোমার সাথে একটু কথা বলবো, তাই সেদিন পড়ার শেষে তোমার বাড়ি পর্যন্ত গিয়েছিলাম। কিন্তু তোমার সাথে কথা বলা তো দূর, তোমার দিকে একবার তাকাতেও সাহস হয়নি আমার। তুমি হয়তো ভাববে কেমন বেহায়া ছেলে পেছন পেছন আসছে। আর এভাবে পিছু নেওয়াটা আমারও একদমই পছন্দ নয়। তবুও নিজেকে সংবরণ করতে না পেরে সেদিন তোমার আগে আগে আসছিলাম — অন্তত তোমার বাড়িটা কোথায় জানতে পারব এই আশায়।</p>
+
+        <p>মেয়েরা ভুল ছেলেদের প্রেমে পড়ে। যে ছেলেগুলো বখাটে, বাক্যপটু, বেহায়া এবং সুপার গ্লু প্রকৃতির — সেই ছেলেদের প্রতি মেয়েরা আকৃষ্ট হয় বেশি। ভদ্র ছেলেগুলোর প্রতি মেয়েরা আকৃষ্ট হয় কম। এর কারন হলো — এরা ব্যক্তিত্ব সম্পন্ন, আত্মকেন্দ্রিক, বেহায়াপনা এদের দ্বারা হয় না।</p>
+
+        <p>ভদ্র ছেলেরা হয়তো তোমার দিকে গভীর মমতা নিয়ে তাকাবে, পবিত্র বন্ধনে তোমার সাথে জড়াতে চাইবে, কিন্তু মুখ ফুটে সে কিছুই বলতে পারবে না। কিন্তু যে ছেলেটা বেহায়া, তোমার প্রতি জোঁকের মতো লেগে থাকবে, বিভিন্ন ভাবে তোমাকে পটানোর চেষ্টা করবে — সেই ছেলেটির প্রতি তুমি আকৃষ্ট হবে বেশি। এর খেসারত পাবে যখন OYO যাওয়ার পর সমাপ্ত হবে তোমার আবেগিত ভালোবাসার বাসরঘর।</p>
+
+        <p>তুমি আজ পড়তে আসনি বলে আমি আজ বড়ই ব্যাকুল। আজ আমার পড়তে যাওয়ার মত কোন পরিস্থিতি ছিল না। তবুও অনেক প্রতিকূলতা সত্ত্বেও আজ আমি আধা ঘন্টা লেটে পড়তে গেছিলাম — শুধুমাত্র তোমাকে একটু দেখার আশায়। কিন্তু তোমাকে দেখতে না পেয়ে আমার মনটা খুবই বিষন্ন হয়ে উঠেছিল।</p>
+
+        <p>এই রাত জেগে এত কথা বলার একটাই কারণ — তোমাকে আমার ফিলিংসটা বোঝানো, জানানো। এবার তুমি কতটা বুঝবে সেটা তোমার উপরে ছেড়ে দিলাম। তবে তুমি যথেষ্ট ম্যাচিউর, তাই আমি আশা রাখছি আমার ফিলিংস তুমি বুঝবে এবং এর যথাযথ মূল্যায়ন তুমি করবে।</p>
+
+        <p>এর মানে আমি এটা বোঝাতে চাচ্ছি না যে আমাকে তোমার ভালবাসতেই হবে। ভালোবাসা অনেক গভীর। একে অপরকে ভালোভাবে না জেনে ভালোবাসাটা অন্যায় হবে। আমি সেই মাধ্যমিকের নিব্বা নই, আর তুমিও নিব্বি নও। রূপ আর মোহের বসবশর্তী হয়ে তাই প্রেমে পড়া বাঞ্ছনীয় নয়। কারো রূপের প্রেমে পড়া অস্থায়ী। কিন্তু কারো ব্যক্তিত্বের প্রেমে পড়লে তার স্থায়িত্ব চিরদিন।</p>
+
+        <p>একটা বয়সের পর মানুষ কারোর সুন্দর চেহারার প্রেমে পরে না। কারোর সুন্দর চোখ কিংবা সুন্দর চুল তাকে আকর্ষণ করে না। তখন মানুষ ভীষণভাবে প্রেমে পরে একটা পারসোনালিটির, কড়া এটিটিউড এর! মানুষটার কথা বলার ধরণ আর কাজকর্মের ধরণ তাকে মুগ্ধ করে। ম্যাচুরিটির সাথে সাথে মানুষের রুচিবোধ বদলায়, পছন্দ বদলায়। তখন আর দায়িত্বজ্ঞানহীন সুন্দর মানুষকে ভালো লাগে না।</p>
+
+        <p>মনের মধ্যেও কোন কিছু চেপে রাখতে নেই, তাই তোমার প্রতি আমার সমস্ত ফিলিংস এখানে ব্যক্ত করলাম — যেটা হয়তো আমি মুখে কোনদিনই বলতে পারতাম না।</p>
+
+        <p>আমার প্রতি যদি তোমার একটুও ফিলিংস থাকে বা একটুও সহানুভূতি জন্মায়, তাহলে আশা রাখছি পজিটিভলি তুমি আমার অনুভূতির মূল্যায়ন করবে।</p>
+
+        <p>আশা রাখছি নির্দ্বিধায় শীঘ্রই তুমি তোমার প্রতিউত্তর জানাবে এবং বন্ধুত্বের হাত বাড়িয়ে দেবে। তোমার অনুভূতি এবং মতামত যাই হোক না কেন, আমি তার যথেষ্ট সম্মান রাখবো।</p>
+
+        <p>সর্বদাই তোমার মঙ্গল কামনা করি।<br>
+        শুভ রাত্রি।</p>
+    </div>
+
+    <div class="signature">
+        — এক সাধারণ অনুভূতি, একটি অমোঘ চিঠি – উত্তরহীন।
+    </div>
+</div>
+
+<!-- শেয়ার ও নেভিগেশন অংশ (অচিনপুরের রেলগাড়ি টেমপ্লেটের অনুকরণে) -->
+<div style="max-width:780px; margin:20px auto 0 auto;">
+    <div class="share">
+        <button onclick="shareNow()" class="share-btn">📲 শেয়ার করুন</button>
+        <button onclick="copyLink()" class="share-btn">🔗 লিংক কপি করুন</button>
+        <div id="copyMsg" class="copy-msg">✅ লিংক কপি হয়েছে!</div>
+    </div>
+
+    <!-- সম্পর্কিত গল্প (আগের দুটি গল্পের লিংক) -->
+    <div class="related">
+        <h3>📚 আরও পড়ুন</h3>
+        <a href="index.html">🏠 মূল পাতায় ফিরুন</a>
+        <a href="achinpirerrailgari.html">🚂 অচিনপুরের রেলগাড়ি</a>
+        <a href="part1.html">🌌 অদৃশ্য জগতের দ্বার</a>
+    </div>
+
+    <div class="home">
+        <a href="index.html">🏠 হোমপেজে যান</a>
+    </div>
+
+    <!-- Cusdis কমেন্ট সিস্টেম -->
+    <p class="comment-text">💬 আপনার মতামত জানান – উত্তর না আসা চিঠি নিয়ে কী ভাবছেন?</p>
+    <div id="cusdis_thread"
+        data-host="https://cusdis.com"
+        data-app-id="6bf38bc4-dcc7-46ff-b711-47dcda6d2f5a"
+        data-page-id="outtor_chithi"
+        data-page-url="https://banglagolpogalaxy.github.io/outtor_chithi.html"
+        data-page-title="অউত্তর চিঠি"
+        data-theme="auto">
+    </div>
+    <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+</div>
+
+<script>
+// প্রগ্রেস বার (অচিনপুরের রেলগাড়ি থেকে নেওয়া)
+window.onscroll = () => {
+    let s = document.documentElement;
+    document.getElementById("progress").style.width =
+        (s.scrollTop / (s.scrollHeight - s.clientHeight)) * 100 + "%";
+}
+
+// ডার্ক মোড প্রাথমিক অবস্থা (সিস্টেম অনুযায়ী)
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.body.classList.add("dark-mode");
+}
+
+// ডার্ক মোড টগল ফাংশন (কমেন্ট রিলোড সহ)
+function toggleDark() {
+    document.body.classList.toggle("dark-mode");
+    const cusdis = document.getElementById("cusdis_thread");
+    if (cusdis && window.CUSDIS) {
+        cusdis.innerHTML = "";
+        window.CUSDIS.renderTo(cusdis);
+    }
+}
+
+// শেয়ার ফাংশন (নেটিভ শেয়ার বা ক্লিপবোর্ড)
+function shareNow() {
+    const url = location.href;
+    if (navigator.share) {
+        navigator.share({ title: document.title, url });
+    } else {
+        navigator.clipboard.writeText(url).then(() => alert("লিংক কপি হয়েছে!"));
+    }
+}
+
+// লিংক কপি (অতিরিক্ত)
+function copyLink() {
+    const url = location.href;
+    navigator.clipboard.writeText(url).then(() => {
+        const msg = document.getElementById('copyMsg');
+        msg.style.display = 'block';
+        setTimeout(() => { msg.style.display = 'none'; }, 2000);
+    });
+}
+</script>
+
+</body>
+</html>
